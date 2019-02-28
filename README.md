@@ -61,7 +61,7 @@ MS 사의 소스코드 편집 툴입니다. [링크](https://code.visualstudio.c
 [다운로드 링크](https://slack.com/downloads)
 
 
-## GitHub / SourceTree
+## GitHub / GitHub Desktop / SourceTree
 
 ### GitHub
 
