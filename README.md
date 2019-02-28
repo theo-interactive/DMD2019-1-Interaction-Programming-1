@@ -54,7 +54,7 @@ MS 사의 소스코드 편집 툴입니다. [링크](https://code.visualstudio.c
 
 업무용 메신저로 오픈 채널, 비공식 채널을 통해 팀 구성원들과 소통할 수 있는 협업 툴입니다. [링크](https://slack.com/)
 
-인터랙션 프로그래밍 2 Slack 채널 : [https://dmd2018-2-ip2.slack.com/](https://dmd2018-2-ip2.slack.com/)
+인터랙션 프로그래밍 1 Slack 채널 : [https://dmd2019-1-ip1.slack.com/](https://dmd2019-1-ip1.slack.com/)
 
 <img src="https://a.slack-edge.com/b5ab6/marketing/img/downloads/screenshots/mac_screenshot@2x.png" width="600">
 
@@ -67,7 +67,18 @@ MS 사의 소스코드 편집 툴입니다. [링크](https://code.visualstudio.c
 
 개인 프로젝트, 팀원간의 프로젝트 등 소스관리를 할 수 있는 소스 저장소입니다. [링크](https://github.com/)
 
-인터랙션 프로그래밍 2 GitHub 소스저장소 : [https://github.com/ryonghwon/DMD2018-2-Interaction-Programming-2/](https://github.com/ryonghwon/DMD2018-2-Interaction-Programming-2/)
+인터랙션 프로그래밍 1 GitHub 소스저장소 : [https://github.com/ryonghwon/DMD2019-1-Interaction-Programming-1/](https://github.com/ryonghwon/DMD2019-1-Interaction-Programming-1/)
+
+
+### GitHub Desktop
+
+GitHub 소스를 관리할 수 있는 GUI 툴입니다. [링크](https://desktop.github.com)
+
+<img src="https://desktop.github.com/images/github-desktop-screenshot-mac.png" width="600">
+
+local 폴더에 git 을 설치하고 GitHub Desktop 에 remote 하여 사용 가능합니다.
+
+[다운로드 링크](https://central.github.com/deployments/desktop/desktop/latest/darwin)
 
 
 ### SourceTree
