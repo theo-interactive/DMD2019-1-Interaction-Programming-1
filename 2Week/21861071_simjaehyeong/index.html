@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>2WEEK_0314</title>
+    <!--html 주석-->
+
+    <!-- fonts -->
+    <!-- Google Fonts 에서 웹폰트 로드(외부) -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto" rel="stylesheet"> -->
+
+    <style>
+        /* fonts */
+        /* Google Fonts 에서 웹폰트 로드(내부)) */
+        @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto');
+        /* css */
+        html, body{
+            margin: 0;
+            padding: 0;                                         
+            }
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: rgb(63, 63, 63);
+            text-align: center;
+            margin: 200px 0px 35px;
+            }
+
+            h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: rgb(63, 63, 63);
+            text-align: center;
+            margin-left: 220px;
+            }
+
+    </style>
+</head>
+<body>
+
+    <h1>2WEEK_Assignment!</h1>
+    <h2>21861071_심재형</h2>
+
+    <!-- 본문 끝, 스크립트 시작 -->
+
+    <script type="text/javascript">
+    //javascript 작성.
+    
+    //주석을 한 줄만 쓸 때
+    /* 여러 줄의
+    주석을 쓸 때 */
+
+    // 자바에서는 정수, 실수가 상관 없습니다.
+
+
+    alert("In case I don\'t see you\nGood afternoon\nGood evening\nAnd Good night!");
+
+
+
+    // 1. number, 숫자
+        console.log(1); console.log(01); console.log(111);
+        // > 1          // > 1           // > 111
+
+    // 2. string, 문자열
+        console.log("안녕"); console.log("반가워"); 
+        // > 안녕            // > 반가워
+        console.log("1"); console.log("01"); console.log("111");
+        // > 1            // > 01            // > 111
+                                                                //> 숫자 1과 문자열의 1 다름 확인.
+        console.log("나는 '누구'인가"); console.log('나는 "누구"라고');
+        console.log("나는 \'누구\'인가"); console.log('나는 \"누구\"라고');
+        console.log("a\nb\nc"); console.log("한방\n비누");
+        
+
+
+
+    // 3. math, 수학
+
+        //3-1 : 루트값 구하기
+        console.log(Math.sqrt (9));         // > 3
+
+        //3-2 : 거듭제곱값 구하기
+        console.log(Math.pow(2, 10));       // > 1024   
+
+        //3-3 : 소수점 올림, 정수 반환
+        console.log(Math.ceil(10.4));       // > 11
+
+        //3-4 : 소수점 버림, 정수 반환
+        console.log(Math.floor(12.8));      // > 12
+
+        //3-4 : 소수점 반올림, 정수 반환
+        console.log(Math.round(10.2));      // > 10
+        console.log(Math.round(10.7));      // > 11
+
+    // 3. + - * / %, 연산
+
+        //3-1. 숫자 연산
+
+        // +, 더하기
+        console.log(1+100); console.log(1.1+1.5); console.log(1.8+120);
+        // > 101            // > 2.6              // > 121.8
+
+        // -, 빼기
+        console.log(1-100); console.log(1.5-1.1); console.log(120-118.5);
+        // > -99            // > 0.4              // > 1.5      
+
+        // *, 곱하기
+        console.log(100*3); console.log(1.1*1.5); console.log(1.8*120);
+        // > 300            // > 1.65             // > 216
+
+        // /, 나누기
+        console.log(100/3); console.log(10/2); console.log(150/150);
+        // > 33.333333...   // > 5             // > 1
+
+        //  a%b a를 b(몫)로 나눈 후의 나머지가 나옵니다!!
+        console.log(10%2); console.log(1.1%1.5); console.log(120%7);
+        // > 0             // > 1.1              // > 1
+
+
+        //3-2. string 연산
+        console.log("심"+" 거"+"드"); // > 심 거드
+        console.log("2186"+"1071");  // > 21861071 
+        console.log("1"+ 2 + 3);         // > 123 : 문자로 묶이는데
+        console.log(2 + 3 +"1");         // > 51 : 숫자로 먼저 계산 후 문자로 묶었음
+        console.log("1"+ Number("2")); //문자를 숫자 타입으로 변경 후 연산 > 12
+        console.log(Number("2") + Number("5")+ "4"); // > 74 : 문자를 숫자 타입으로 변경 후 연산 > 역시 숫자 연산 후 문자로 묶인다
+        
+
+
+
+    // 4. 데이터 타입 확인(typeof)
+    //>>> 숫자인지 문자인지 배열인지 객체인지 타입 속성을 확인 가능하다.
+        console.log(typeof 2.8);             // > number
+        console.log(typeof "과제");          // > string
+        console.log(typeof [1, 2, 4, 8]);    // > object
+                       //> 이 속성 뭔지 모르겠다.[]
+        console.log(typeof {age : "21"});    // > object
+        console.log(typeof 10==20);          // > false
+        console.log(typeof false);           // > boolean
+
+
+    // n. object, 오브젝트
+        var person =  {feature:"눈썹", lastName:"Gud", nickname:"hypergud", things:"음악, 영화, 그림, 홈트레이닝, 애니메이션, LP판 등"};
+
+
+
+
+    // 자기소개 10 ~ 20 문장으로
+    console.log("안녕하세요," + " 제 이름은 "+"심"+"재"+"형"+", 반갑습니다.");
+    console.log("전 " + "빠른 "+"0"+[100%100]+"년생이지만 "+ Number("21") + "살로 생각해주세요. " );
+    console.log("전라남도, 빛의 도시 광주에서 상경해 이제 자취경력 " + [12 + 1] + "개월 넘어갑니다.");
+    console.log("제 " + person.feature + "에 대해 궁금하시다면\n작년 할로윈에 눈썹 분장을 위해 밀고 유지중입니다!^^");
+    console.log("제 영어이름이자 닉네임은 " + person.lastName + "입니다. 발음은 [걷(겉)!]으로 해주시면 좋아요bb.");
+    console.log("좀 더 덧붙이자면 " + [(20*100)+(3*6)+1] + "년의 테마는 " + person.nickname + "입니다.\n저의 정상을 넘어 더욱 넓은 필드로 도약하고자 이름을 설정했어요!");
+    console.log("저는 "+ person.things + "을 좋아합니다.");
+    console.log("냉면을 \"아주\" 좋아합니다. 맛있는 냉면집 있으면 알려주세요.\n\"물냉\" 맛집이면 더 좋습니다^^.");
+    console.log("순대를 " + "싫어합니다. : "+ (null === undefined) + (null === undefined) + (null === undefined) + (null === undefined) + (null === undefined));
+    console.log("낯선 사람이든" + " " + "누구든 정말로" + " 대화하는 걸 " + "좋아합니다. : "+ (null == undefined) );
+    console.log("0"+Number("10")+" - "+"9073"+" - "+ "5870 : "+"My phone "+ (typeof 3.14) + "\n공통되거나 비슷할~~뻔한 관심사가 있어도 대화하죠!");
+    console.log("지금 인생에서 단기 목표는 " + "프로그래밍 스킬" + "을 쌓아 아주 재밌는 사이트를 만드는 것! 이구요.\n장기 목표는 압도적인 사람이 되는 겁니다.\n전 압도적이라는 단어가 참 좋아요! : " + (null == undefined) + (null == undefined)+ (null == undefined) + (null == undefined)  );
+    console.log("반가웠습니다! 좋은 하루 되세용♡");
+    </script>
+</body>
+</html>
