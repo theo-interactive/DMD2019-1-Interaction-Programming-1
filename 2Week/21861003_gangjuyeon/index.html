@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2Week - 3/14</title>
+    <!-- html 코드의 주석 -->
+
+
+    <!-- Google Fonts에서 웹폰트 로드(1. embed) -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&amp;subset=korean" rel="stylesheet">    <style>
+        /* CSS 코드의 주석 */
+
+
+        /* CSS */
+        /* Google Fonts에서 웹폰트 로드(2. import)
+        style 맨 윗줄에 !!! */
+        /* @import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR&subset=korean'); */
+        html,body,h1,h2{
+            margin: 0;
+            padding: 0;
+            }
+        body{
+            font-family: 'Noto Serif KR', serif;
+        }
+        h1{
+            color: #999;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 52px;
+        }
+    </style>
+</head>
+<body>
+    <h1>안녕하세요.</h1>
+    <script type="text/javascript">
+        //주석. - 1줄만 주석처리.
+        /*
+        주석. - 2줄 이상의 주석처리.
+        주석.
+        주석.
+        */
+
+        /*
+
+        //body 내용 맨 끝에 자바스크립트를 쓰겠다.
+        console.log('콘솔창에 로그 기록.');
+        //escape. - '랑 " 원래기능 x 문자로 인식
+        console.log('콘솔창에 로그 \"기록\".');
+        console.log('콘솔창에 로그 기록.');
+        console.log('콘솔창에 로그 \'기록.');
+        // \n - new line. - 문자상에서 줄바꿈을 한다.
+        console.log('콘솔창에 로그 기록.\n두번째 줄\n세번째 줄');
+        //"", '' 상관없음
+
+        alert('경고창입니다.');
+
+
+        //Number. 숫자.
+        console.log(100);console.log(200);
+
+        //String. 문자열.
+        console.log("안녕하세요.");console.log("100");console.log("200");
+
+
+        //연산. + - * / %
+        // + 더하기.
+        console.log(1 + 100);
+        console.log(1.5 + 1.5);
+        console.log(1.5 + 100);
+        // - 빼기.
+        console.log(100 - 1);
+        // * 곱하기.
+        console.log(3 * 3);
+        console.log(3 * 2.5);
+        // / 나누기.
+        console.log(100 / 20);
+        console.log(100 / 3);
+        // % 나머지.
+        console.log(10 % 2); //0
+        console.log(10 % 3); //1
+        console.log(10 % 5); //0
+        console.log(20 % 7); //6
+
+
+        //String 연산.
+        console.log("hello~" + "world!"); //hello~world!
+        console.log("hello~" + "world!" + " ~~"); //hello~wolrd! ~~ //띄어쓰기 인식함
+        console.log(1 + 1); //2
+        console.log(1 + "1"); //11 // 숫자 + 문자 -> 문자.
+        console.log(1 + Number("1")); //2 // 문자를 숫자 타입으로 변경 후 연산.
+        console.log("1" + "1"); //11
+
+        
+
+        //typeof
+        //숫자, 문자, 배열, 객체인지 타입 속성을 확인.
+        console.log(typeof 1); //number
+        console.log(typeof "1"); //string
+        console.log(typeof [1, "2"]); //object
+        console.log(typeof ["1", "2", "3"]); //object
+        console.log(typeof { name : "name"}); //object
+        console.log(typeof true); //boolean
+
+        */
+
+
+        //과제
+
+        //1. JavaScript 연습하기
+
+        // Number
+        console.log(100);console.log(150);
+        // 예상: 100과 150이 각각 출력된다.
+        // 결과: 예상과 같음.
+
+        // String
+        console.log("주멍");
+        // 예상: 주멍이 콘솔창에 출력된다.
+        // 결과: 예상과 같음.
+
+        // Number 연산
+        console.log(100+2);console.log(100-2);
+        console.log(100*2);console.log(100/2);
+        console.log(100%3)
+        // 예상: 102, 98, 200, 50, 1이 각각 출력된다.
+        // 결과: 예상과 같음.
+
+        // String 연산
+        console.log("강"+"주멍");
+        console.log("강"+" 주멍");
+        // 예상: 강주멍, 강 주멍이 각각 출력된다.
+        // 결과: 예상과 같음.
+
+        // Number + String 연산
+        console.log("강주멍"+11);
+        console.log("강주멍"+Number(11));
+        // 예상: 둘 다 강주멍11로 출력된다.
+        // 결과: 예상과 같음.
+        // 근데 전자는 강주멍11 전부 문자로 인식하고 후자는 11을 숫자로 인식함~~~~
+
+        // Datatype
+        console.log(typeof 11); 
+        //예상 : number
+        console.log(typeof "주멍"); 
+        //예상 : string
+        console.log(typeof [11, "주멍"]); 
+        //예상 : object
+        console.log(typeof ["1", "2", "3"]); 
+        //예상 : object
+        console.log(typeof { name : "주멍"}); 
+        //예상 : object
+        console.log(typeof true); 
+        //예상 : boolean
+        //결과 : 예상과 같음.
+
+        //2. 자기소개하기
+        console.log("안녕하세요"+" 강주연입니다.");
+        console.log("나이는 "+Number(20+3)+"살 입니다.");
+        console.log("좋아하는 것은"+" 멜빵과 당근케이크와 "+Number(22/2)+"월을 좋아합니다.");
+        console.log(Number(20-9)+"월을 좋아하는 이유는\n제 생일이 있는 달이기 때문입니다.");
+        console.log("사실 예전에는 "+Number(5*2+1)+"월을 정말 좋아했었는데\n최근들어서는 "+Number(10%3+10)+"월이 너무너무너무너무 추워져서 이젠 좀 별로입니다...");
+        console.log("그리고 저는 재밌는 사람을 좋아합니다.."+"\n같이 있으면 웃음이 자꾸자꾸 나와서 좋습니다.");
+        console.log("싫어하는 것은..."+" 잘 모르겠습니다."+" \n그냥 남들이 싫어하는 것을 저도 싫어합니다.");
+        console.log("그리고 저의 별명은 '주멍'입니다.\n이름으로 불러주셔도 되고 별명으로 불러주셔도 되고 편하신대로 저를 불러주세요.");
+        console.log("저는 지금 범계에 살고 있습니다."+[1>0]+"\n저랑 맛있는거 먹으러 다녀요...");
+        console.log("그리고 저는 아주 부지런합니다."+[1<0]+"\n그 날의 과제는 바로바로 해버리곤 하죠^^;");
+        console.log("꿈은 그냥 지금처럼 쭉 재밌게 살고 싶습니다.\n지금의 제 생활에 아주 만족하고 있습니다.");
+    </script>
+</body>
+</html>
