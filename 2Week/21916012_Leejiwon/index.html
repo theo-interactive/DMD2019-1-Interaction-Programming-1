@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <title>2Week</title>
+    <style>
+        /* CSS */
+        html, body, h1, h2{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            color: #999;
+            font-size: 30px;
+            line-height: 45px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 23%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, Nice to meet you</h1>
+    <script type="text/javascript">
+
+        // 1. 수업 복습 및 연습
+    
+        /*
+        alert : 경고창
+        console.log : 콘솔창에 출력 ( "" 및 '' 중 아무거나 사용해도 된다, 데이터는 그냥 써도 된다)
+        세미콜론(;)은 명력이 끝났다는 의미의 기호 (자바에서는 굳이 사용하지 않아도 작동이 된다)
+        */
+
+        console.log("Welcome!");
+        console.log("Here is \'My\' Web Site\nThank you");
+        alert("경고창입니다.");
+
+        /*
+        산술연산자 : +(더하기) -(빼기) *(곱하기) /(나누기) %(나머지)
+        정수 : 1+1; 딱 떨어지는 숫자
+        실수 : 1.5+1.5; 소수점이 있는 수
+        (마찬가지로 자바에서는 크게 구분을 하지 않음)
+        */
+
+        // number - 숫자
+        console.log(100 + 10);
+        // string - 문자
+        console.log("100" + "10");
+        // 연산, + - * / %
+        console.log(1 + 100);
+        console.log(1.5 + 100);
+        console.log(100 - 1);
+        console.log(3 * 3);
+        console.log(100 / 20);
+        console.log(100 % 3);
+
+        console.log("100" + 10);
+        console.log("yes" + " or" + " no");
+        console.log(1 + Number("1"));
+
+        // typeof - 숫자, 문자, 배열, 객체인지 속성을 확인
+        console.log(typeof 1);
+        console.log(typeof [1, "2", "3"]);
+        console.log(typeof "1");
+        console.log(typeof true);
+        
+
+        // 2. 자기소개
+
+       var person = {};
+       console.log(typeof person);
+       var person = {
+           greeting : "안녕하세요",
+           name : "이지원",
+           job : "학생",
+           university : "계원예술대학교",
+           major : "디지털미디어디자인과"
+       };
+       person.email = "bbongwa@naver.com";
+       person.billing_address = '경기도';
+       
+       console.log(person.greeting + '. 저는 ' + person.name + "입니다.");
+       console.log('나이는 올해 ' + 11*2 + '살이구요.');
+       console.log('지금은 ' + person.university + ' ' + person.major + ' ' + 9/3 + '학년에 재학중입니다.');
+       console.log(Number("1") + '학기 동안 잘 부탁드려요!');
+    </script>
+</body>
+</html>
