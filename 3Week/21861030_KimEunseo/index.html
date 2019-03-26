@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3주차 과제</title>
+</head>
+<body>
+    <h1>3주차 과제 _ 21861030/김은서</h1>
+    <script type="text/javascript">
+    // * 수업 내용 _ 밑에 과제 있음* //
+
+    //Math.
+    //수학.
+    // console.log(Math);
+
+    //Math.pow
+    //제곱
+    // console.log(Math.pow(4,2));
+    // console.log(Math.pow(10,10));
+    // console.log(Math.pow(5,3));
+    
+    //Math.round(반올림)
+    //반올림. 실수 -> 정수로 변환 .5이상이면 올림, 미만이면 내림.
+    // console.log(Math.round(1.55555555555));
+    // console.log(Math.round(1.49999999999));
+    // console.log(Math.round(1.2345678900000));
+
+    //MAth.ceil(올림)
+    //실수 ->정수로 변환. 소수점의 값이 있을때 무조건 올림.
+    // console.log(Math.ceil(1.00001));
+    // console.log(Math.ceil(50.1));
+
+    //Math.floor(내림)
+    //실수 -> 정수로 변환. 소수점의 값이 있을때 무조건 내림.
+    // console.log(Math.floor(40.9999999));
+    // console.log(Math.floor(99.999999));
+
+    //Math.sqrt(제곱근)
+    // console.log(Math.sqrt(9));
+    // console.log(Math.sqrt(45));
+    // console.log(Math.sqrt(123));
+
+    //* Math.random * (가장중요)
+    //랜덤. 0 ~ 1 사이의 랜덤한 값.
+    // console.log(Math.random());
+    // //값을 더 키우고싶을때는 뒤에 곱하기 해주면댐 ( * 10)
+    // //0 ~ 1 까지의 랜덤값. =0.1111111...
+    // console.log(Math.random()*1000);
+    // //0 ~ 1 까지의 랜덤값 * 100 = 11.1111111...
+    // console.log(Math.round(Math.random()*100));
+    // //0 ~ 100 의 랜덤값.11.1111111...... -> 반올림 11
+
+    // var a = Math.random(); //랜덤한 값을 담고있음.
+    // console.log(a);
+    // console.log(a * 100);
+    // console.log(Math.round(a * 100));
+
+
+
+
+    // //변수 
+    // //var variable = value;
+    // var a; 
+    // console.log(a);
+    // //변수 선언 선언만 되어있고 값이 없음 (undefind)
+    // a = 1;
+    // console.log(a);
+    // //a 변수를 재활용1
+    // a = 4;
+    // console.log(a);
+    // //a 변수를 재활용2
+    // a  = "hello ~";
+    // var b = 2;
+    // console.log(a);
+    // console.log(a, a + b);
+    // //변수 선언 후 값을 대입하고 활용이 가능하다.
+    // // =    대입 연산자. 변수에 값을 대입해준다.
+    // //a 변수에 1 (Number) 값을 대입
+    // a = 10;
+    // var c = a + b;
+    // console.log(c);
+
+
+    // var a = "Hello ~";
+    // var b = "World!";
+    // var c;
+
+    // c = a + b;
+    // c += " " + "~~~~~~";
+    // // c = c + "~~~~~~"
+    // console.log(c);
+
+    //100에 10 을 더한후 10을 나누고 , 10을 뺀후 , 10을 곱한다.
+
+    // var a = 100;
+    // var b = 10;
+    // var c = ((a + b) / b - b) * b;
+    // console.log(c);
+
+
+    // //200에 20을 더한후 20을나누고 ,20을뺀후, 10을 곱한다.
+    // var a = 200;
+    // var b = 20;
+    // var c = ((a + b) / b - b) * b;
+    // console.log(c);
+    // //300에 20을 더한후 10을 나누고, 30을 뺸후 40을곱한다.
+    // var a = 300;
+    // var b = 20;
+    // var c = 10;
+    // var d = 30;
+    // var e = 40;
+    // var f = ((a + b) / c - d) * e;
+    
+    // console.log(f);
+    
+    // //1000에 300을 더하고 5로 나누고 10을 밴후 60을 곱한다.
+
+    // var a = 1000;
+    // var b = 300;
+    // var c = 5;
+    // var d = 10;
+    // var e = 60;
+    // var f = ((a + b) / c - d) *e;
+
+    // console.log(f);
+
+
+    // var a = 1;
+    // var b = "1";
+
+    // a == b  
+
+    // console.log(a === b);
+
+    // var a = 0;
+    // var b = -0;
+
+    // a == b;
+
+    // console.log(a === 0);
+
+    // var a = true;
+    // var b = 1;
+
+    // a == b ;
+    // console.log(a === b);
+    // console.log(NaN == NaN);
+
+    //비교연산자 
+    //연산자 + - * / %
+    //값과 값을 비교할떄 사용되는 연산자
+    // == : 일치 연산자
+    // >, <, >=, <= : 크고 작음을 비교 
+    //비교 연산자의 값은 boolean 으로 출력
+    //boolean 은 true (1), flase 으로 출력
+
+    // var a  = 1;
+    // var b = 1;
+
+    // console.log(a == b);
+    // console.log(a > b);
+    // console.log(a >= b);
+    // console.log(a < b);
+    // console.log(a <= b);P
+
+    // var a  = 1;
+    // var b = 2;
+
+    // console.log(a == b);
+    // console.log(a > b);
+    // console.log(a >= b);
+    // console.log(a < b);
+    // console.log(a <= b);
+
+    // //일치 연산자
+    // console.log(true ==1);
+    // console.log(true ===1);
+    // console.log(1 == "1");
+    // console.log(1 === "1");
+    // console.log(NaN == NaN);
+    // console.log(NaN === NaN);
+
+    // var a = "hello";
+    // var b = "hello";
+    // console.log(a == b);
+
+    //null
+    // var a = null;
+    // var b;
+    // console.log(a); //비어있는 값이 들어감.(의도적으로) // -> null
+    // console.log(b); //값이 선언되지 않음.// -> undefinde
+
+
+    // //typeof -어떤 타입의 데이터인지 확인.
+    // console.log(typeof a);
+    // console.log(typeof b);
+
+    /* 
+    //데이터 타입
+    Number - 숫자
+    String - 문자
+    Boolean - 참 /거짓
+    null - 의도적으로 값을 비움
+    Object - 객체 
+    Array - 배열 
+    NoN - 수식이 삽입되지 않음.
+    */
+
+    //부정 
+    //! = : 서로의 값이 다른지 판단.
+    //값이 다를때 -> true 값이 같을때 ->false
+
+    // var a = 1;
+    // var b = 1;
+
+    // a = 5;
+    // b = 10;
+    // console.log(a == b);
+    // console.log(a != b);
+
+    // var a = 1;
+    // var b = "1";
+    // console.log(a == b);
+    // console.log(a != b);
+
+    //object 객체 
+    //변수들을 담을 그릇
+
+    // var object = {};
+    // object = new Object();
+    // //빈 객체값을 입력 
+    // //{ } 비어있는 객체
+    // //{key (색인) : value(값)};
+    // //{ key (색인) : value (값), key(색인) : value(값),key(색인),value(값)
+
+    // object = {
+    //     tittle :"tittle",
+    //     number : 100,
+    //     key1 :2000,
+    //     key2 : 1000
+    // }
+    // console.log(object);
+    // console.log(object.tittle);
+    // console.log(object["key1-"]);
+    // console.log(typeof object.tittle); //string.
+    // //console.log(document);
+
+
+//     var me = {
+//         name : "김은서",
+//         job : "계원예술대학교 2학년 학생",
+//         phone :"010-4332-5419",
+//         email : "bogray_soso@naver.com",
+
+//     }
+
+//     var profile = '안녕하세요 제 이름은' + me[name] + '입니다.\n'; 
+//     profile +='그리고 제 직업은'+ me[job] +'입니다.\n';
+//     profile +='제 핸드폰 번호는 '+ me[phone];
+
+
+
+// console.log("안녕하세요 제 이름은 " + me.name + "입니다.");
+// console.log("저의 직업은"+ me.job +"입니다");
+// console.log("저의 핸드폰번호는"+ me.phone +"입니다");
+// console.log("저의 이메일은"+ me.email +"입니다");
+
+
+
+//조건문 if 
+//만약에 조건이 맞다면? true / false
+    // if(condition){
+    // //true, ->>>>>>
+    // }
+    // else{
+    // }
+    // //&& - and, || - or
+
+    // if(condition && condition){ //2개의 조건이 있고 두가지 조건 모두 true가 될떄, 안으로 갈 수 있다.
+
+    // }
+    // if(conditiond || condition ){ //2개의 조건이 있고 두가지 중 하나라도 true 가 될떄 안으로 갈수 있다.
+
+    // }
+
+    // var a = 1;
+    // var b = 2;
+    // var c;
+
+    // if(typeof c === 'undefind'){
+    //     c = a + b;
+    // };
+
+    // console.log(c);
+
+    // if(a > b){ //false.
+    // //true ->>>>>>>>>>
+    //     c = a * b;
+    // }
+    // else {
+    //     //false ->>>>>>>
+    //     c = a + b;
+    // }
+    // console.log(c);
+    
+
+    // var a = 5;
+    // var b = 1;
+    // var c;
+
+    // if(a > b && a == 4){ //false.
+    // //true ->>>>>>>>>>
+    //     c = a * b;
+    // }
+    // else if(a === b){
+    //     c = a / b;
+    // }
+    //     else {
+    //     //false ->>>>>>>
+    //     c = a + b;
+    // }
+    // console.log(c);
+
+    // //배열 
+    // //값을 담는 그릇.
+    // var array1 = [];
+    // array1 = new Array();
+    // arry1 = [1, 2, 3, 4, "1", "안녕하세요", null];
+    // console.log(array1);
+    // console.log(array1.length);//배열 안의 개수. 
+    // console.log(array1[0]);//0 안에 해당하는 값
+    // console.log(array1[3]);//3 안에 해당하는 값.
+
+
+    // var a = 1;
+    // var b = 2;
+    // var c = "hello";
+    // var d = "World";
+    // array1 = [a, b, c, d, 100, 200, "안녕하세요"]
+    
+    // console.log(array1);
+    // var e = array1[4] + array1[1];
+    // console.log(array1[6] + '.\n' + array1[2] + ' ' + array1[3] + '\n' + e);
+
+    // //반복문
+    // //for
+    // var i = 0;
+    // //;; 두개가 형식
+    // //사용할변수; 변수의 조건; 변수의 증감;
+    // for(i; i < 5; i++){
+    //     console.log(i);
+    // }
+
+    // var _say = ["Hello", "My", "Name", "is", "rh"];
+    // for(var i= 0; i < _say.length; i++){
+
+    //     console.log(_say);
+    // }
+
+    // var _say = ["안녕하세요", " 저의 ", " 이름은 ", " 김은서 ", " 입니다. "];
+    // var result = '';
+    // for(var i= 0; i < _say.length; i++){
+    //     result += _say[i]; + '';
+    //     //console.log(_say[i]);
+
+    //     console.log(result);
+    // }
+
+    
+    
+    
+    // 과제 1 . 2 . 3//
+    /*
+        <Quest 1>
+        1. 변수를 선언하고 숫자 '29' 를 할당합니다.
+        2. 변수를 하나 더 선언하고 1(순서) 에서 선언한 변수와 덧셈 대입을 이용해서 '31' 이 할당되도록 코드를 작성합니다.
+        3. 변수를 하나 더 선언하고 1(순서) 에서 선언한 변수와 나머지 연산 대입을 이용해서 '2' 를 할당하도록 코드를 작성합니다.
+        4. 만약 2(순서) 에서 생성한 변수를 3(순서) 에서 선언한 변수로 나누었을때 나머지가 '1' 인 경우 '일치합니다.' 라는 문자열이 console 에 출력되도록 작성합니다.
+    */
+    
+       var a;
+       a = 29;
+       console.log(a);
+
+        var b;
+        b = a + 2;
+        console.log(b);
+
+        var c;
+        c = a % 3;
+        console.log(c);
+
+        if(b % c == 1){
+
+            console.log("일치합니다.");
+
+        }
+
+    /*
+        <Quest 2>
+        'a' 부터 'z' 까지 순서대로 console 에 출력되도록 작성합니다.
+    */
+
+        var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+        for(var i = 0; i < alpha.length; i++){
+
+            console.log(alpha[i]);
+
+        }
+
+    /*
+        <Quest 3>
+        1. '1' 부터 '50' 까지 순서대로 출력하고,출력된 값의 짝/홀수 여부를 함께 표시합니다.
+        2. console 에 출력 예시 : 1은 홀수!
+    */
+        for(var i = 1; i <= 50; i++){
+
+            if(i % 2 == 0){
+
+                console.log(i + "은 짝수!");
+
+            }else{
+
+                console.log(i + "은 홀수!");
+            }
+        }
+
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
