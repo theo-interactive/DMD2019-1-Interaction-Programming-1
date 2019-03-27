@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3Week_21861014</title>
+</head>
+<body>
+
+    <h1>3주차 과제 21861014 김민경</h1>
+    <script type="text/javascript">
+
+    // Q.01
+
+    // 1) 변수를 선언하고 숫자 '29'를 할당합니다.
+    var a = 29;
+    console.log(a); //29
+    
+    // 2) 변수를 하나 더 선언하고 1(순서) 에서 선언한 변수와 **덧셈 대입**을 이용해서 '31'이 할당 되도록 코드를 작성합니다.
+    var b = a + 2;
+    console.log(b); //31
+
+    // 3) 변수를 하나 더 선언하고 1(순서) 에서 선언한 변수와 **나머지 연산 대입**을 이용해서 '2'를 할당하도록 코드를 작성합니다.
+    var c = 29 % 3;
+    console.log(c);//2
+
+    // 4) 만약 2(순서)에서 생성한 변수를 3(순서) 에서 선언한 변수로 나누었을때 나머지가 '1'인경우 '일치합니다.' 라는 문자열이 console에 출력 되도록 작성 합니다.
+    var e = b % c;
+    if (e == 1){
+        console.log("일치합니다.");
+    }
+    else {
+        console.Log("일치하지 않습니다.");
+    }
+
+
+
+
+
+
+    // Q.02
+    // 1) a 부터 z 까지 순서대로 console에 출력되도록 합니다.
+    // 첫번째 경우 ( 한글자 한글자씩 )
+    var i = 0;
+    var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    for (i;i<alphabet.length;i++){
+        console.log(alphabet[i]);
+    }
+
+    // 두번째 경우 ( 한번에 모든글자 )
+    var ii = 0;
+    var result = "";
+    for (ii;ii<alphabet.length;ii++){
+        result += alphabet[ii] + " ";
+    }
+    console.log(result);
+
+
+
+    /*
+    var atz = "a";
+    for(atz;atz<"z";atz++){
+        console.log(atz);
+    }
+    수는 컴퓨터 자체가 순서를 알기때문에 문자열 생성없이도 출력해 낼 수 있을거라 생각했고.
+    혹시나 문자열도 컴퓨터가 스스로 순서를 알 수 있을까 했지만 실패했다.
+    */
+
+
+
+
+
+
+
+
+    // Q.03
+    // 1) '1'부터 '50'까지 순서대로 출력하고 출력된 값의 **짝/홀수** 여부를 함께 표시합니다.
+    var i2 = 1;
+    for(i2; i2<=50; i2++){
+        if(i2 % 2 == 0){
+            console.log(i2 + "은 짝수");
+        }
+        else{
+            console.log(i2 + "은 홀수");
+        }
+    }
+
+
+
+
+    </script>
+    
+</body>
+</html>
