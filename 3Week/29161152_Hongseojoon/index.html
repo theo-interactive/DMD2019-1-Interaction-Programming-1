@@ -1,64 +1,93 @@
 <!DOCTYPE html>
+
 <html lang="ko">
+
 <head>
+
     <meta charset="UTF-8">
+
     <title>3Week - Quest</title>
+
 </head>
+
 <body>
+
 <h1>3WEEK - Quest</h1>
+
 <script type="text/javascript">
-    /*
-     Quest 1.
-     1. 변수를 선언하고 숫자 '29' 를 할당합니다.
-     2. 변수를 하나 더 선언하고 1(순서) 에서 선언한 변수와 덧셈 대입을 이용해서 '31' 이 할당되도록 코드를 작성합니다.
-     3. 변수를 하나 더 선언하고 1(순서) 에서 선언한 변수와 나머지 연산 대입을 이용해서 '2' 를 할당하도록 코드를 작성합니다.
-     4. 만약 2(순서) 에서 생성한 변수를 3(순서) 에서 선언한 변수로 나누었을때 나머지가 '1' 인 경우 '일치합니다.' 라는 문자열이 console 에 출력되도록 작성합니다.
-     */
-    
-    //1.
-    var a = 29;
-    //2.
-    var b = a + 2; // -> 31.
-    //3.
-    //var c = a % ? // -> 2.
-    //3-1.
-    var c = a % 27; // 29 : 27 * 1 -> 나머지 - 2
-    //3-2.
-    var c = a % 9; // 29 : 9 * 3 -> 나머지 - 2 
-    //3-3.
-    var c = a % 3; // 29 : 3 * 9 -> 나머지 - 2
-    //4.
-    if(b % c === 1){
-        console.log("일치합니다.");
-    }
 
     /*
-     Quest 2.
-     ‘a' 부터 'z' 까지 순서대로 console 에 출력되도록 작성합니다.
+
+     Quest 1.
+
+     1. 변수를 선언하고 숫자 '29' 를 할당합니다.
+
+     2. 변수를 하나 더 선언하고 1(순서) 에서 선언한 변수와 덧셈 대입을 이용해서 '31' 이 할당되도록 코드를 작성합니다.
+
+     3. 변수를 하나 더 선언하고 1(순서) 에서 선언한 변수와 나머지 연산 대입을 이용해서 '2' 를 할당하도록 코드를 작성합니다.
+
+     4. 만약 2(순서) 에서 생성한 변수를 3(순서) 에서 선언한 변수로 나누었을때 나머지가 '1' 인 경우 '일치합니다.' 라는 문자열이 console 에 출력되도록 작성합니다.
+
      */
-    var alphabet = ['A','b','C','d','E','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-    var result = '';
-    for(var i = 0; i < alphabet.length; i++){
-        // console.log(alphabet[i]);
-        // result += alphabet[i].toString().toLocaleUpperCase() + ' '; //문자열을 대문자로 변경.
-        // result += alphabet[i].toString().toLocaleLowerCase() + ' '; //문자열을 소문자로 변경.
-        result += alphabet[i] + ' ';
-        // result = result + alphabet[i] + ' ';
+
+     var a = 29;
+     var b = a + 2;
+
+    //var c = a % 27 // 29: 27 * 1->2
+    var c = a % 27; //29 :27 * 3-> 나머지 2
+    var c = a % 9; //29 :9 * 3-> 나머지 2
+    var c = a % 3; //29 :3 * 9-> 나머지 2
+    if(b % c===1){
+        console.log("일치합니다.");
+        
     }
-    console.log(result);
-    
+
+
     /*
-     Quest 3.
-     '1' 부터 '50' 까지 순서대로 출력하고, 출력된 값의 짝/홀수 여부를 함께 표시합니다. console 에 출력  예시 : 1은 홀수!
+
+     Quest 2.
+
+     ‘a' 부터 'z' 까지 순서대로 console 에 출력되도록 작성합니다.
+
      */
-    for(var i = 1; i <= 50; i++){
-        // console.log(i);
-        if(i % 2){ // i % 2 -> 1 : 1, 2 : 0, 3 : 1, 4 : 0 ..... 50 : 0
-            console.log(i + '은 홀수!'); //홀수.
-        }else{
-            console.log(i + '은 짝수!'); //짝수.
+
+    var arphabet = ["a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,"];
+    for(var i = 0; i < alphabet.length; i++);{
+
+        var result = '';
+        //console.log(alphabet[i]);
+        result += alphabet.length[i].toString().toLocalUpperCase() + ''; //문자열을 대문자로변경
+        result += alphabet.length[i].toString().toLocalLowerCase() + ''; //문자열을 소문자로 변경
+        //result += alphabet[i] + ' ';
+
+        //result = result + alphabet[i] + ' ';
+
+        console.log(result);
+    }
+
+    
+
+    /*
+
+     Quest 3.
+
+     '1' 부터 '50' 까지 순서대로 출력하고, 출력된 값의 짝/홀수 여부를 함께 표시합니다. console 에 출력  예시 : 1은 홀수!
+
+     */
+    for(var i = 1; 1 <= 50; i++){
+        if( i % 2){
+                    //i % 2 -> 1:1; 1,2:0 3:1,4:0....50 : 0
+                    console.log(i+ '은 홀수!'); //홀수
+                    console.log(i+ '은 짝수!'); //짝수
+            console.log(i);
         }
     }
+     
+
+    
+
 </script>
+
 </body>
+
 </html>
