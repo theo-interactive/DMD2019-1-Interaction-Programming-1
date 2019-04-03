@@ -129,9 +129,10 @@
 
         function searchIndex(_arr, numnum) {
                 for(var i=0; i<_arr.length; i++){
-                if(_arr[i] === numnum){
+                if(_arr[i] === numnum)
+                {
                     console.log(i);
-                }
+                };
             };
 
         };
@@ -173,10 +174,10 @@
         //결과를 가질 변수 result로 정하고 묶음.
         function checkType(_arr5) {
             var result = '';
-            for(var i=0; i<_arr5.length; i++) {
+            for(var i=0; i<_arr5.length; i++)
+            {
                 _arr5[i] = typeof _arr5[i];
                 result += _arr5[i] + " ";
-                
             };
             console.log(result); 
         };
