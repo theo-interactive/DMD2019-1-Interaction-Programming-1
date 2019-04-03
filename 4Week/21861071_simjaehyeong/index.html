@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>4WEEK_Assignment</title>
+    <!-- fonts -->
+    <!-- Google Fonts 에서 웹폰트 로드(외부) -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto" rel="stylesheet"> -->
+    <style>
+        /* fonts */
+        /* Google Fonts 에서 웹폰트 로드(내부)) */
+        @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto');
+        /* css */
+        html, body{
+            margin: 0;
+            padding: 0;                                         
+            }
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: rgb(63, 63, 63);
+            text-align: center;
+            margin: 200px 0px 35px;
+            }
+
+            h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: rgb(63, 63, 63);
+            text-align: center;
+            margin-left: 220px;
+            }
+
+    </style>
+</head>
+<body>
+    <h1>4WEEK_Assignment</h1>
+    <h2>21861071_심재형</h2>
+    
+    <!-- 본문 끝, 스크립트 시작 -->
+    
+    <script>
+
+        /*과제 1
+
+        1) var _cars = ['Tesla', 'Audi', 'Volvo', 'Benz'];
+        2) _cars 배열의 문자열 원소를 아래 결과와 같은 문자열로 console 에 출력되도록 작성합니다.
+        3) -> Benz, Volvo, Audi, Tesla.
+
+        */
+
+        //교안의 배열 정렬 reverse(); 적용
+
+        var _cars = ['Tesla', 'Audi', 'Volvo', 'Benz'];
+        _cars.reverse(); //cars 배열 뒤집음.
+        console.log(_cars); // 배열한 순서의 반대로 출력되었다.
+        // > ["Benz", "Volvo", "Audi", "Tesla"] 라고 출력
+
+
+        /*과제 2
+
+        1) 변수를 선언하고 숫자 원소들로만 이뤄진 배열을 할당합니다. ex) var _numbers = [-1, 2, 5, 10, 1, -10, 8, 4];
+        2) 1(순서) 에서 선언한 변수의 배열 원소 중 가장 큰 숫자를 console 에 출력되도록 작성합니다.
+        3) 1(순서) 에서 선언한 변수의 배열 원소 중 가장 작은 숫자를 console 에 출력되도록 작성합니다.
+
+        */
+
+        /*1) 배열 한 후 Math.min, Math.max 연산자로 출력*/
+        var _num = [3, 15, 23, 41, 68, 83, 97];
+        console.log(Math.min(3, 15, 23, 41, 68, 83, 97));
+        console.log(Math.max(3, 15, 23, 41, 68, 83, 97));
+        // > 3 출력 (min)
+        // > 97 출력 (max)
+
+        var _num = [3, 15, 23, 41, 68, 83, 97];
+        console.log(Math.min(_num));
+        console.log(Math.max(_num));
+        // > NaN 출력 (min, max)
+
+        /* Math.min();은 항상 안에 숫자만 있어야 한다. 변수로 제시하면 계산할 수 없다고 NaN 출력
+        그래서 다른 예시로 나온 , 변수가 안에 있어도 되는 Math.min.apply(); 사용해봄*/
+
+        /*2) Math.min.apply, Math.max.apply 연산자로 출력*/
+        var _num = [3, 15, 23, 41, 68, 83, 97];
+        console.log(Math.min.apply(null, _num));
+        console.log(Math.max.apply(null, _num));
+
+        /* W3School 에 apply()가 뭘 하는 애인지 찾아봤는데 
+        The apply() method takes arguments as an array. 라고 한다..
+        함수의 독립변수를 배열로 가져온다는 말 같다.. */
+        
+        /*2-1) Math.min(max).apply를 min(max) 변수에 대입
+        var _num = [3, 15, 23, 41, 68, 83, 97];
+        var min = Math.min.apply(null, _num);
+        var max = Math.max.apply(null, _num);
+        console.log(min);
+        console.log(max);
+        */
+
+
+
+        /* 실패!
+        function numbers() {
+            return [3, 15, 23, 41, 68, 83, 97];
+        }
+        var num = numbers();
+
+        console.log(Math.min(num));
+        console.log(Math.max(num)); //NaN
+        */
+
+        /*과제 3
+
+        1) searchIndex 라는 함수를 선언하고, 2개의 매개변수(첫번째는 배열, 두번째는 숫자) 를 지정합니다.
+        //function searchIndex(_arr, numnum){}
+        2) 1(순서) 함수에 전달된 첫번째 매개변수 배열의 원소들과 두번째 매개변수의 숫자를 비교하여(반복문, 조건문 사용), 
+        //for(var i=0; i<_arr.length; i++){}
+        일치할 경우 배열의 index(원소 순서) 를 console 에 출력하도록 작성합니다.
+        //일치연산자 ===
+        //{if(_arr[i] === numnum){console.log(i);}}
+        //i 값에 따라서 배열 순서대로 한명씩 나와서 numnum 안에 있는 정수 친구와 비교
+        3) 1(순서) 함수에 각 매개변수를 지정하여 호출합니다.
+        //searchIndex([1, 2, 4, 8], 2);
+        4) => ex) searchIndex([8, 10, 13, 30, 50], 30); 호출할 경우 3 이 출력됩니다.*/
+
+        function searchIndex(_arr, numnum) {
+                for(var i=0; i<_arr.length; i++){
+                if(_arr[i] === numnum){
+                    console.log(i);
+                }
+            }
+
+        }
+        searchIndex([1, 2, 4, 8], 2); 
+        // > 1 출력
+
+
+
+        /*과제 4
+
+        1) checkType 이라는 함수를 선언하고, 1개의 매개변수(배열)를 지정합니다.
+        //function checkType(_arr4) {}
+        2) 1(순서) 함수에 전달된 매개변수 배열의 원소들의 데이터 타입을 원소로 가지는 새로운 배열을 생성하여(반복문 사용) console 에 출력합니다.
+        //배열원소의 데이터타입을 원소로 가지는 새로운 배열 정의 > _arr4[i] = typeof _arr4[i];
+        //for(var i=0; i<_arr4.length; i++) {_arr4[i] = typeof _arr4[i];console.log(_arr4[i]);}
+        3) 1(순서) 함수에 매개변수를 지정하여 호출합니다.
+        //checkType([20, 'Gud', 'Korea', {hobby : 'eating'}, [2, 4], 0, 1, 5, 4]);
+        4) => ex) checkType([10, 'Hello', 'World', {name : 'rh'}, [10, 20]]); 호출할 경우 ['number', 'string', 'string', 'object', 'object'] 가 출력됩니다.
+
+        */
+        
+        //그냥 출력
+        function checkType(_arr4) {
+            for(var i=0; i<_arr4.length; i++) {
+                _arr4[i] = typeof _arr4[i];
+                console.log(_arr4[i]);
+            }
+        }
+        checkType([20, 'Gud', 'Korea', {hobby : 'eating'}, [2, 4], 0, 1, 5, 4]);
+        /* > number
+             2 string
+             2 object
+             4 number 라고 출력*/
+
+/*
+
+        //한 줄로 출력하는데 이 식이 그냥 출력과 같은 class 에 있으면 뒤에 있는 식의 정렬로 둘다 되어버려서 하나는 주석처리함.
+        //결과를 가질 변수 result로 정하고 묶음.
+        function checkType(_arr5) {
+            var result = '';
+            for(var i=0; i<_arr5.length; i++) {
+                _arr5[i] = typeof _arr5[i];
+                result += _arr5[i] + " ";
+                
+            }
+            console.log(result); 
+        }
+        checkType([20, 'Gud', 'Korea', {hobby : 'eating'}, [2, 4], 0, 1, 5, 4]);
+        //  > number, string, string, object, object, number, number, number, number 라고 출력
+
+        */
+
+
+        /* 이 친구를 출력하면 n, t, r, i, n, g, n, t, r, i, n, g가 각각으로 쭈루룩 출력되는데
+        이 이유는... 배열 변수의 데이터 타입을 갖는 변수를 배열타입으로 잘 적지 않았기 때문이라 생각.
+        function checkType(_arr6) {
+            for(var i=0; i<_arr6.length; i++) {
+                _arr6 = typeof _arr6[i];
+                console.log(_arr6[i]);
+            }
+        }
+        checkType([20, 'Gud', 'Korea', {hobby : 'eating'}, [2, 4], 0, 1, 5, 4]);
+        */
+        
+
+        
+
+
+        
+
+    
+    </script>
+</body>
+</html>
