@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <title>4Week</title>
+</head>
+<body>
+<h1>4Week - 3/28</h1>
+<script type="text/javascript">
+/*
+    //함수 function.
+    //name 함수 생성. : 만드는 방법.
+    function name(){
+        // console.log('함수가 실행됨.');
+        for(var i = 0; i < 10; i++){
+            // console.log(i);
+        }
+        var a = 1;
+        var b = 2;
+        // console.log(a + b);
+    }
+    //함수는 호출을 해야만 실행이 가능하다.
+    // name();
+    //매개변수 parameter. 함수 생성할 때 변수를 넣어주는 용도. () 안에 변수를 생성.
+    function myName(name){
+        var message = '안녕하세요. 제 이름은 ' + name + '입니다.';
+        // console.log(message);
+    }
+    // myName('김용원');
+    // myName('Kim Yong Won');
+    var a = 20, b = 30, c = 10;
+    // var a = 20;
+    // var b = 30;
+    // var c = 10;
+    // console.log(c);
+    function addNumbers(){
+        c = b + a;
+    }
+    // console.log(c);
+    addNumbers();
+    // console.log(c);
+
+    //유효범위 scope.
+    //전역변수.
+    var _a = 10;
+    function scope(){
+        a = 30;
+        //지역변수.
+        var a = 20;
+        _a = 30;
+        // console.log(a);
+    }
+    scope();
+    // console.log(_a);
+
+    var global = 'global';
+    var a = 'My';
+    var b = 'Name';
+    function local(){
+        var local = 'local';
+        var a = 'Hello';
+        var b = 'World';
+        //지역변수...
+        console.log(a + ' ' + b);
+        console.log(global, local);
+    }
+    local();
+    //전역변수...
+    console.log(a + ' ' + b);
+    console.log(global, local);
+*/
+
+    //메서드 Method
+    // function sayHello() { // function.
+    //     console.log("Hello~");
+    // }
+    // sayHello();
+    // var _obj = { // Method.
+    //     name : 'object',
+    //     sayHello : function() {
+    //         console.log("Hello!");
+    //     }
+    // }
+    // console.log(_obj.name);
+    // _obj.sayHello();
+    /*
+    //함수의 종류. 3가지.
+    //1. 명시적 함수. - 일반적으로 쓰이는 함수. 선언식.
+    function name(){
+    }
+    function sayHello(msg) {
+        console.log(msg);
+    }
+    sayHello("Hello");
+    //2. 익명함수. - 이름이 없는 함수. 함수 생성자.
+    // var sayHello = new Function('name', 'return name');
+    // sayHello("Hello");
+    //3. 함수 리터럴. - 변수에 함수를 담아서 사용. 함수식 - 표현식.
+    var sayHello = function(msg){
+        console.log(msg);
+    }
+    sayHello("Hello~");
+    */
+
+    //매개변수. Parameter.
+    //함수를 생성할 때 존재되는 변수. (선언까지 완료)
+    // function sayHello(msg, number1){ //msg -> 매개변수.
+    //     console.log(msg);
+    //     console.log(number1);
+    // }
+    // sayHello("Hello", 1, 2, 3); //값을 대입 - 전달인자.
+    //전달인자는 매개변수의 개수에 따라 유효값으로 인정.
+    // function sayHello(msg){
+    //     // console.log(msg); // undefined.
+    //     if(typeof msg === 'undefined'){
+    //         console.log("msg의 값이 없습니다.");
+    //     }else{
+    //         console.log(msg);
+    //     }
+    // }
+    // sayHello(); //전달인자 없이 호출.
+    // sayHello("Hello~");
+    // function addNumbers(number1, number2){
+    //     console.log(number1 + number2);
+    // }
+    // addNumbers(1, 2);
+    // addNumbers(20);
+    // addNumbers(10, "10");
+    // addNumbers("Hello", "World");
+
+/*
+    function getSize(size1, size2){
+        var size = size1 + size2;
+        //return 을 사용하지 않는 다면 함수는 무조건 undefined 를 반환.
+        return size;
+    }
+    var size = getSize(20, 30);
+    // console.log(size);
+
+    function sum(number1, number2, number3, number4, number5){
+        //300에 20을 더한 후, 10으로 나누고, 30을 뺀 후, 40을 곱한다.
+        // var result = number1 + number2;
+        // result = result / number3;
+        // result = result - number4;
+        // result = result * number5;
+        var result = ((number1 + number2) / number3 - number4) * number5;
+        return result;
+    }
+    var a = sum(300, 20, 10, 30, 40);
+    console.log(a);
+    var b = sum(1000, 200, 10, 300, 10);
+    //함수에서 수행된 코드의 결과를 전역의 변수에 대입할 수 있다. (함수 반환을 통해서...)
+    console.log(b);
+    */
+
+    //논리연산자.
+    // 다중 조건을 사용하기 위한 연산자.
+    // && - and
+    // || - or
+    var a = 0, b = 1, c = 2, d = 2;
+    if(a !== b && c === d && a === 0 && d !== 1){ //두가지 조건이 모두 성립될 때.
+        console.log("pass");
+    }
+    if(a === b || c === d){ //조건 중 한개라도 성립될 때.
+        console.log("pass");
+    }
+
+    //switch 조건문.
+    //if 조건문.
+    var a = 3;
+    switch(a) {
+        case 0 :
+            console.log("Hello");
+            break;
+        case 1 :
+            console.log("World");
+            break;
+        case 2 :
+            console.log(":)");
+            break;
+        default :
+            console.log("값이 없음");
+            break;
+    }
+
+    //배열
+    function getMembers(){
+        return ["rh", "june", "mind"];
+    }
+    //var members = getMembers();
+    // var members = ["rh", "june", "mind"];
+    // for(var i = 0; i < members.length; i++){
+    //     console.log(members[i]);
+    // }
+    //for( in ){}
+    // for(var name in members){
+    //     //console.log(name);
+    //     //console.log(name, value);
+    //     console.log(members[name]);
+    // }
+    var _heros = ["Iron man", "Hulk", "Thor", "Doctor Stranger"];
+    for(var name in _heros){
+        console.log(_heros[name]);
+    }
+    var _person = {
+        name : "김용원",
+        phone : "010-9137-8688",
+        email : "rh@102labs.com"
+    }
+    for(var key in _person){
+        console.log(key + ' : ' + _person[key]);
+    }
+    //for in
+    //객체 또는 배열 반복을 통해 아이템별 값을 출력할 수 있다.
+
+    var numbers = [0,1,2,3,4,5,6,7,8,9,10];
+    var result = 0;
+    for(var i in numbers){
+        //result += numbers[i];
+        result = result + numbers[i];
+        // result = result * numbers[i];
+    }
+    console.log(result);
+</script>
+</body>
+</html>
