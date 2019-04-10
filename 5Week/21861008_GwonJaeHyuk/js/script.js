@@ -14,7 +14,7 @@ var exReturn1 = function() {
     return ["문자열", 10];
 }
 var ex1 = exReturn1();
-console.log(ex[0], ex[1]);
+console.log(ex1[0], ex1[1]);
 
 var exReturn2 = function() {
     return {
