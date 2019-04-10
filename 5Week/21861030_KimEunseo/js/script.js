@@ -1,4 +1,7 @@
 //Q1
+//교수님 콘솔창에 잘뜨다가 갑자기 안뜨는데 왜그런건가융..ㅠㅠ
+
+
 var string='';
 var number='';
 function getEven(num_0){
@@ -10,9 +13,8 @@ function getEven(num_0){
         console.log(string);
         console.log(number);
     }
+var even1 =getEven(10);
 
-
-even1 = getEven(10);
 
 //Q2
 var getStar = function (num_1){
@@ -49,9 +51,11 @@ console.log(fruit.reverse());
 
 //Q4
 
-function getSize(width, height){
+function getSize(width, height)
+{
     return ("{winWidth : 윈도우 영역의 넓이값, winHeight : 윈도우 영역의 높이값}")
 }
+
 var winSize = getSize();
 
 console.log("윈도우 콘텐츠의 영역 width : " + winSize.winWidth + " px, height : " + winSize.winHeight + " px.");
