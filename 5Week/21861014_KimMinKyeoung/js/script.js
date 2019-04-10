@@ -93,12 +93,12 @@ function getSize(){
     var win1 = "윈도우 콘텐츠의 영역 width : " + window.innerWidth + "px , height" + window.innerHeight + 'px 입니다.';
     console.log(win1);
     var win = {
-        winWidth : window.innerWidth,
+        winWidth : window.innerWidth ,
         winHeight : window.innerHeight
     }
     console.log(win);
 
-    return win;
+    return {win,win1};
 
 }
 var winSize = getSize();
