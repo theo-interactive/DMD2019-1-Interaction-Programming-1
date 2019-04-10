@@ -114,3 +114,12 @@ var winSize = getSize();
   return을 두개 사용할 수도 없고 return에 두개의 값을 넣어줄 수도 없고,,,
   하나는 console 하나는 return으로 값을 넣어주면 return값은 또 안나오구요.. ㅠ 
   */
+
+/*
+rh : 두개 이상의 값을 반환하려면 배열이나 객체로 반환해야 합니다. 
+현재 getSize() 에서 반환받은 값을 출력하려면 객체가 반환되었기 때문에 해당 색인에 해당하는 요소를 찾아주면 됩니다.
+*/
+console.log(winSize.winWidth, winSize.winHeight);
+
+
+// rh : js 폴더 생성하여 경로 변경하세요.
