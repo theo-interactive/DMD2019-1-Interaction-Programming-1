@@ -91,3 +91,5 @@ function getSize(width, height){
 var winSize = getSize();
 console.log(winSize);
 console.log("윈도우 콘텐츠의 영역 width :" + window.innerWidth + "px, height : " + window.innerHeight + "px 입니다.")
+
+// rh : js 폴더 생성하여 경로 변경하세요.

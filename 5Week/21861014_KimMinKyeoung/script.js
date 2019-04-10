@@ -122,4 +122,4 @@ rh : 두개 이상의 값을 반환하려면 배열이나 객체로 반환해야
 console.log(winSize.winWidth, winSize.winHeight);
 
 
-// rh : js 폴더 생성하여 경로 변경하세요.
+// rh : js 폴더 생성하여 경로 변경하세요. index.html 에서 경로도 확인합니다.
