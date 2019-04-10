@@ -66,7 +66,7 @@ var fruit = ['Apple', 'Orange', 'Grape', 'Melon'];
 fruit.unshift('Mango');
 fruit.splice(2, 0, 'Cherry');
 fruit.reverse();
-console.log(fruit, fruit.length);
+console.log(fruit);
 
 
 /*
