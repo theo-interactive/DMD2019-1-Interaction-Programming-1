@@ -70,12 +70,20 @@
     console.log("저는 \'후회하며 살지말자'"+'가 인생의 모토 입니다');
     console.log("저는"); 
     console.log(19+ Number("1"));//그냥 더하기와 Number을 쓰는 치이를 잘 모르겠습니다 결과값은 둘다 20으로 나오는데 왜 Number을 쓰는건가요..!
+    /*
+    rh : Number() 는 문자열을 숫자 타입으로 변경하는 명령입니다. 따라서 19 + 1 의 숫자연산이 이뤄지는 것입니다.
+    */
     console.log("살입니다");
     console.log("저는"); 
     console.log(16*10);
     console.log("cm"+"입니다");  
     console.log("저는")
     console.log("0"+"0"); //"1"+1과 "1"+"1"의 차이를 잘 모르겠습니다. 결과값은 다 11로 출력이 되어서요,,!
+    /*
+    rh : "1" + 1 은 문자열 + 숫자의 연산이고 "1" + "1" 은 문자열 + 문자열 연산입니다.
+    연산과정에 여러개 중 하나라도 문자열 타입이 존재한다면 숫자타입은 문자열로 인식되어 연산이 이뤄집니다.
+    따라서 "11" 문자열이 됩니다.
+    */
     console.log("입니다")
     console.log("저의 이름은")
     console.log(typeof {name : "YounJi"});
@@ -83,6 +91,9 @@
     console.log("저는 내손"+1*2+'동에 살고있습니다.');
     console.log("저는 \n허쉬 프레즐맛 \n한식 \n밥을 좋아합니다");
     console.log("감사합니다")
+
+    // rh : index.html 로 파일명 변경하세요.
+    
     </script>
 </body>
 </html>
