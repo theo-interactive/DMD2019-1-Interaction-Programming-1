@@ -93,19 +93,14 @@ function getSize(){
     var win1 = "윈도우 콘텐츠의 영역 width : " + window.innerWidth + "px , height" + window.innerHeight + 'px 입니다.';
     console.log(win1);
     var win = {
-        winWidth : '__' + window.innerWidth + '__',
-        winHeight : '__' + window.innerHeight + '__'
+        winWidth : window.innerWidth ,
+        winHeight : window.innerHeight
     }
     console.log(win);
 
-    return win;
+    return {win,win1};
 
 }
-/*
-rh : 객체 형식 : { winWidth : __윈도우 콘텐츠 영역의 넓이값__, winHeight : __윈도우 콘텐츠 영역의 높이값__ } 의 __윈도우 콘텐츠 영역의 넓이값__ 는 기입되는 숫자를 표시해놓은 것입니다. __ 은 삭제합니다.
-{ winWidth : 1920, winHeight : 1200 } 의 형식으로 출력되어야 합니다.
-*/
-
 var winSize = getSize();
 
 
@@ -119,12 +114,3 @@ var winSize = getSize();
   return을 두개 사용할 수도 없고 return에 두개의 값을 넣어줄 수도 없고,,,
   하나는 console 하나는 return으로 값을 넣어주면 return값은 또 안나오구요.. ㅠ 
   */
-
-/*
-rh : 두개 이상의 값을 반환하려면 배열이나 객체로 반환해야 합니다. 
-현재 getSize() 에서 반환받은 값을 출력하려면 객체가 반환되었기 때문에 해당 색인에 해당하는 요소를 찾아주면 됩니다.
-*/
-console.log(winSize.winWidth, winSize.winHeight);
-
-
-// rh : js 폴더 생성하여 경로 변경하세요. index.html 에서 경로도 확인합니다.
