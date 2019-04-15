@@ -6,6 +6,27 @@ return을 자꾸 두 개 쓰고 싶어져서 계속 헤맸는데,
 그냥 떠오르는대로 return _string, _number 이렇게 하면 하나의 값만 리턴되길래
 궁금해져서 질문합니다!
 */
+
+/*
+rh : 두개의 값을 반환하려면 배열이나 객체로 반환해야 합니다.
+*/
+var exReturn1 = function() {
+    return ["문자열", 10];
+}
+var ex1 = exReturn1();
+console.log(ex1[0], ex1[1]);
+
+var exReturn2 = function() {
+    return {
+        "string" : "문자열",
+        "number" : 10
+    }
+}
+var ex2 = exReturn2();
+console.log(ex2.string, ex2.number);
+console.log(ex2["string"], ex2["number"]);
+
+
 var getEven = function(num_a){
     var _string = '';
     var _number = '';
@@ -57,6 +78,10 @@ var getSize = function() {
     // _array += window.innerHeight + ',' + window.innerWidth
     return ["winWidth : " + window.innerWidth + " 윈도우 콘텐츠 영역의 넓이 값 , " + "winHeight : " + window.innerHeight + " 윈도우 콘텐츠 영역의 높이값"];
 }
+/*
+rh : 객체 형식 : { winWidth : __윈도우 콘텐츠 영역의 넓이값__, winHeight : __윈도우 콘텐츠 영역의 높이값__ } 의 __윈도우 콘텐츠 영역의 넓이값__ 는 기입되는 숫자를 표시해놓은 것입니다.
+{ winWidth : 1920, winHeight : 1200 } 의 형식으로 출력되어야 합니다.
+*/
 
 var winSize = getSize();
 console.log(winSize);
