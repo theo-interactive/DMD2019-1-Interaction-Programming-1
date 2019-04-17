@@ -79,6 +79,7 @@ var enterName = function() {
     if (name !== null) {
         if (name === ''){
             console.log("이름을 정확히 입력해주세요.");
+            alert("이름을 정확히 입력해주세요.")
             return enterName();
         }
         else {
