@@ -63,3 +63,20 @@ button + button{margin-left:10px}
 .animated1{border-radius:50%}
 .animated2{background-color:red}
 .animated3{width:200px;height:200px}
+
+.box{
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	font-size: 10px;
+	line-height: 20px
+}
+.red{
+	background-color: red;
+	color: black
+}
+.black{
+	background-color: black;
+	color: white
+}
