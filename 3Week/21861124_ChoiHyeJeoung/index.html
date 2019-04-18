@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3week</title>
+</head>
+<body>
+    <h1>3week_21861124  </h1>
+
+
+
+    <script type="text/javascript">
+
+    //Quest 1.
+     //1)변수를 선언하고, 숫자 29를 할당합니다.
+     var a = 29;
+     console.log(a);
+     //2)변수를 하나 더 선언하고 1순서 에서 선언한 변수와 덧셈 대입을 이용해서 31이 할당되도록 코드를 작성합니다. 
+     var b = a + 2;
+     console.log(b);
+     //3)변수를 하나 더 선언하고 1순서 에서 선언한 변수와 나머지 연산 대입을 이용해서 2를 할당하도록 코드를 작성합니다. 
+     var c = a % 27
+     console.log(c);
+     //4)만약 2순서 에서 생성한 변수를 3순서 에서 선언한 변수로 나누었을때 나머지가 '1' 인 경우 '일치합니다.' 라는 문자열 이 console 에 출력되도록 작성합니다
+     if(b%c == 1)
+        {
+            console.log("일치합니다.");
+        };
+        
+
+    //Quest 2.
+     //1)‘a' 부터 'z' 까지 순서대로 console 에 출력되도록 작성합니다.
+     var _array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ];
+     for (var i = 0; i < 26; i++ ){
+         console.log(_array[i]);
+     };
+
+     //Quest 3.
+     //1) 1' 부터 '50' 까지 순서대로 출력하고, 출력된 값의 짝/홀수 여부를 함께 표시합니다 console 에 출력  예시 : 1은 홀수!
+    for(var m = 1; m <= 50 ; m++ ){
+        if(m%2==1){
+            console.log(m + '은 홀수입니다.');
+        }
+        else{
+            console.log(m + '은 짝수입니다.');
+        }
+    };
+
+
+     
+    </script>
+</body>
+</html>

@@ -2,21 +2,26 @@
 Quest 1.
 1. 문서의 title을 '학번_이름' 으로 변경합니다.
 */
-// console.log(document.title); // - 기존 타이틀
-document.title = "21861051_노지은";
-// console.log(document.title); // - 바뀐 타이틀
 
+document.title = '21461077_오창열';
+console.log(document.title);
 
 /*
 Quest 2.
 1. id 가 'title' 인 요소에 'Hello World' 문자열이 포함되도록 작성합니다.
 */
-
+var id= document.getElementById("title");
+id.textContent = 'Hello World';
+console.log(id);
 
 /*
-Quest 3.
+Quest 4.
 1. class 가 'title' 인 요소에 '안녕하세요.' 문자열이 포함되도록 작성합니다.
 */
+
+// var _class = document.getElementsByClassName("title");
+// document.getElementsByClassName("title").innerText = "s";
+// console.log(_class);
 
 
 /*
@@ -26,35 +31,35 @@ Quest 4.
 3. rowCount 변수를 선언하고 getRowCount() 의 반환값을 할당받아 아래의 문자열 결과값과 같이 console 에 출력되도록 작성합니다. 
     -> 문자열 결과 : row class의 개수는 __개 입니다.
 */
+// console.log(document.getElementsByClassName("row").length);
 var getRowCount = function(){
-    var row = document.getElementsByClassName("row");
-    return row.length;
+    return document.getElementsByClassName("row").length;
 }
 var rowCount = getRowCount();
-console.log("row class의 개수는 " + rowCount + "개 입니다.");
-
+console.log("row class의 개수는 "+rowCount+"개 입니다.");
 /*
 Quest 5.
 1. 1 초 마다 'hello' 라는 문자열이 console 에 출력되도록 작성합니다.
 2. 전역범위에 count 변수를 생성하여 매 출력시 console 에 몇 번의 출력이 되고있는지 번호가 함께 출력되도록 작성합니다.
 3. 10 번의 출력 후 해당 기능이 실행되지 않도록 작성합니다.
 */
-var count = 1;
-setInterval(function(){
-    if(count <= 10){
-        console.log("hello" + count);
-        count++;
-    }
-    else{
-        clearInterval(count);
-    }
-}, 1000);
+    var count=0;
+    var timer = setInterval(function() {
+        if(count < 10){
+            count++
+            console.log(count);
+        }
+        else {
+            clearInterval(timer);
+        }
+    },1000);
 
 /*
 Quest 6.
 1. id 가 'scroll' 인 요소에 'scroll' 이라는 class 를 추가합니다.
 2. 1 요소의 위치를 x : 400px, y : 0px 로 좌표이동합니다.
 */
+
 
 
 /*
@@ -76,26 +81,26 @@ Quest 8.
 7. enterName 함수를 호출합니다.
 */
 
-var enterName = function(name){
-    if(name === null){
-        console.log("입력이 취소되었습니다.");
-    }
-    else if(name == ""){
-        var check = alert("이름을 정확히 입력해주세요.");
-        if(check === true){
-            prompt("이름을 입력하세요");
+var enterName = function(){
+    // prompt("이름을 입력해주세요"); 확인
+    var _name = prompt("이름을 입력해주세요");
+    // console.log(_name);
+    // if (_name === null){
+    //     console.log("입력이 취소 되었습니다.");
+    //     enterName();
+    // }
+    if (_name !== null){
+        if(_name === ''){
+            alert("이름을 정확히 입력해주세요.");
+            enterName();
         }
+        else{
+            document.write(_name);
+        }
+    }else{
+        console.log("입력이 취소되었습니다.");
+        enterName();
     }
-    else if(typeof name == "string"){
-        document.write(name);
-    }return;
+
 }
-var box = prompt("이름을 입력해주세요");
-// var name1 = enterName(box);
-// console.log(name1);
-enterName(box);
-
-
-// name == "" 에서 경고창까지는 나왔는데 거기서 다시 알람창이 나오게 하는 방법을 모르겠습니다.
-
-// rh : 해당 부분 위치에 enterName(name); 을 호출하면 됩니다.
+enterName();
