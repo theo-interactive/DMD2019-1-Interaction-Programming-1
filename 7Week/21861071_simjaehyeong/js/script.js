@@ -44,8 +44,8 @@ var $btncancel = document.getElementById("btn-cancel");
 //console.log($btncancel);
 $btncancel.addEventListener('click', function(event){
     // console.log(event);
-    console.log("새로고침");
-    //location.reload();
+    //console.log("새로고침");
+    location.reload();
 });
 
 
