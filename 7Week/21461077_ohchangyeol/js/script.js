@@ -23,7 +23,9 @@ var $btn2 = document.getElementById("btn-check-id");
 $btn2.addEventListener("click", function(event){
     event.preventDefault();
     var _user = document.getElementById("user_id");
-    //console.log( $user.attributes.length);
+    //console.log(_user);
+    // console.log(_user.attributes);
+    //console.log( _user.attributes.length);
     var _langth = _user.attributes.length;
     console.log("input#user_id - value 속성 값의 개수는 "+_langth+" 입니다.");
 });
