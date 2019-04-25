@@ -2,19 +2,27 @@
 Quest 1.
 1. 문서의 title을 '학번_이름' 으로 변경합니다.
 */
-
+document.title = "2019_김용원";
 
 /*
 Quest 2.
 1. id 가 'title' 인 요소에 'Hello World' 문자열이 포함되도록 작성합니다.
 */
-
+var $title = document.getElementById("title");
+$title.innerText = "Hello World";
+$title.innerHTML = "<span>Hello World</span>";
 
 /*
-Quest 4.
+Quest 3.
 1. class 가 'title' 인 요소에 '안녕하세요.' 문자열이 포함되도록 작성합니다.
 */
-
+var $titles = document.getElementsByClassName("title");
+//노드 객체.
+for(var i = 0; i < $titles.length; i++){
+    //console.log($titles[i]);
+    $titles[i].innerText = "안녕하세요.";
+    $titles[i].innerHTML = "<span style=\"background-color:black;color:white\">안녕하세요.</span>";
+}
 
 /*
 Quest 4.
@@ -23,7 +31,18 @@ Quest 4.
 3. rowCount 변수를 선언하고 getRowCount() 의 반환값을 할당받아 아래의 문자열 결과값과 같이 console 에 출력되도록 작성합니다. 
     -> 문자열 결과 : row class의 개수는 __개 입니다.
 */
+var getRowCount = function() {
+    var $row = document.getElementsByClassName("row");
+    return $row.length;
+}
+// ===
+// function getRowCount() {
 
+// }
+var rowCount = getRowCount();
+var result = "row class의 개수는 " + rowCount +"개 입니다."; 
+// console.log("row class의 개수는 " + rowCount +"개 입니다.");
+console.log(result);
 
 /*
 Quest 5.
@@ -31,14 +50,26 @@ Quest 5.
 2. 전역범위에 count 변수를 생성하여 매 출력시 console 에 몇 번의 출력이 되고있는지 번호가 함께 출력되도록 작성합니다.
 3. 10 번의 출력 후 해당 기능이 실행되지 않도록 작성합니다.
 */
-
+var count = 0;
+var _timer = setInterval(function() {
+    console.log('hello');
+    count++;
+    // if(count >= 10){
+    //     clearInterval(_timer);
+    // }
+    if(count >= 10) clearInterval(_timer); //조건문 안에 한줄의 코드만 작성될 때 축약할 수 있다.
+}, 1000);
 
 /*
 Quest 6.
 1. id 가 'scroll' 인 요소에 'scroll' 이라는 class 를 추가합니다.
 2. 1 요소의 위치를 x : 400px, y : 0px 로 좌표이동합니다.
 */
-
+var $scroll = document.getElementById("scroll");
+$scroll.classList.add("scroll");
+setTimeout(function() {
+    $scroll.scrollTo(400, 0);
+}, 30);
 
 /*
 Quest 7.
@@ -46,7 +77,14 @@ Quest 7.
 2. 1 요소의 자식 중 첫번째 요소(.row)에 'red' 라는 class 를 추가합니다.
 3. 1 요소의 자식 중 세번째 요소(.row)를 삭제합니다.
 */
-
+var $article = document.getElementById("article");
+var $rows = $article.getElementsByClassName("row");
+console.log($rows);
+$rows = $article.children;
+console.log($rows);
+$rows[0].classList.add("red");
+// $rows[2].remove();
+$article.removeChild($rows[2]);
 
 /*
 Quest 8.
@@ -58,4 +96,23 @@ Quest 8.
 6. 사용자가 문자 단어 하나라도 입력하고 확인을 클릭한 경우(string), 입력된 사항을 body(화면)의 마지막 부분에 출력합니다.
 7. enterName 함수를 호출합니다.
 */
-
+var enterName = function() {
+    var name = prompt("이름을 입력해주세요.");
+    console.log(name);
+    //null. -> cancel.
+    //"" -> OK. 작성을 안함.
+    //"문자열" -> Ok. 작성 완료.
+    if(name === null){
+        //cancel.
+        console.log("입력이 취소되었습니다.");
+    }else{
+        //OK.
+        if(name === ""){
+            alert("이름을 정확히 입력해주세요.");
+            enterName();
+        }else{
+            document.write(name);
+        }
+    }
+}
+enterName();
