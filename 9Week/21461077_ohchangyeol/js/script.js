@@ -185,11 +185,12 @@ var $btn3 = document.querySelector("button#btn-odd");
 $btn3.addEventListener("click",func);
 function func(event){
     var aa = prompt("숫자를 입력하세요");
+    var www = document.getElementById("odd-result");
     // console.log(aa % 2);
         for(var i = 1; i <= aa; i++){
             // console.log(i);
             if(i % 2 != 0 ){
-                console.log(i);
+                    www.innerText +=i;
             }
         };
 };
