@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <title>직무수행능력평가1 시험</title>
+    <style>
+        *{margin:0;padding:0}
+        ul,ol,li{list-style:none}
+        #list::after,#box::after{content:'';position:relative;display:block;clear:both}
+        .item,.box{float:left;width:100px;height:100%;text-align:center;font-size:20px;line-height:100px}
+        .item{float:left;width:40px;height:40%;text-align:center;font-size:12px;line-height:40px}
+    </style>
+</head>
+<body>
+<div class="section">
+    <span>학번</span> : #<span id="student-number"></span> <button id="btn-student-number">학번출력</button>
+</div>
+<div class="section">
+    <span>이름</span> : <span id="student-name"></span> <button id="btn-student-name">이름출력</button>
+</div>
+<div class="section">
+    <button id="btn-odd">홀수 구하기</button><br/>
+    <span>홀수 결과</span><br/>
+    <div id="odd-result"></div>
+</div>
+<div class="section">
+    <button id="btn-add-item">항목 추가하기</button>
+    <ul id="list">
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+        <li class="item">5</li>
+    </ul>
+</div>
+
+<div class="section">
+    <button id="btn-color-1">스타일 바꾸기(1)</button>
+    <button id="btn-color-2">스타일 바꾸기(2)</button>
+    <div id="box">
+        <div class="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box">box 3</div>
+        <div class="box">box 4</div>
+        <div class="box">box 5</div>
+    </div>
+</div>
+<div class="section">
+    <button id="btn-star">별표 찍기</button><br/>
+    <pre id="star-result"></pre> 
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
