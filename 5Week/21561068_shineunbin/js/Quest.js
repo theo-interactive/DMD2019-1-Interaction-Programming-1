@@ -44,7 +44,6 @@ function getStar(_number2){
         return result;
     }
 }
-
 var star1 = getStar("text")
 var star2 = getStar(5)
 
