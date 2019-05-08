@@ -33,6 +33,7 @@ index.html 에 외부 js/script.js을 로드하여 작성합니다.
 - 동작할 기능 정리
 - 컨셉에 따르는 인터랙션 리서치 (사이트, 영상 등)
 - javascript 코드 리서치 (codepen.io, github 활용)
+- 사이트 디자인
 
 ## 제출
 
