@@ -1,3 +1,5 @@
+console.log("script load");
+
 /*
 Quest 1.
 1. js 폴더와 폴더 내부에 script.js 파일 생성하고 index.html 에 script.js 외부 파일을 로드합니다.
@@ -8,7 +10,7 @@ Quest 1.
 Hello, world!
 ~~~~
 */
-
+//alert("Hello, world!");
 
 /*
 Quest 2.
@@ -23,7 +25,16 @@ Quest 2.
 array = ['Iron Man', 'Captain America', 'Hulk', 'Thor', 'Spider-Man'];
 ~~~~
 */
-
+var _heros = ['Iron Man', 'Captain America', 'Hulk', 'Thor', 'Spider-Man'];
+_heros.push("Doctor Strange");
+// _heros.unshift("배열 요소 값");
+// _heros.splice(4, 1, "Captain Marvel");
+_heros.splice(_heros.length - 2, 1, "Captain Marvel");
+_heros.shift(); //첫번째 요소를 삭제.
+// _heros.pop(); //마지막 요소를 삭제.
+_heros.reverse(); //배열을 순서를 반대로.
+// _heros.sort(); //배열 순서 정렬(알파벳...)
+console.log(_heros);
 
 /*
 Quest 3.
@@ -37,7 +48,26 @@ func(5) : true
 func('text') : false
 ~~~~
 */
-
+function checkType(type) {
+    if(typeof type === 'number'){
+        return true;
+    }
+    if(typeof type === 'string'){
+        return false;
+    }
+    if(typeof type === 'object' || typeof type === 'boolean' || typeof type === 'undefined'){
+        return null;
+    }
+}
+var type1 = checkType(5); //number.
+// console.log(type1);
+var type2 = checkType('text'); //string.
+// console.log(type2);
+var type3 = checkType({}); //object.
+var type4 = checkType([]); //object.
+var type5 = checkType(true); //boolean.
+var type6 = checkType(); //undefined.
+console.log(type1, type2, type3, type4, type5, type6);
 
 /*
 Quest 4.
@@ -64,13 +94,52 @@ object = {
 func(object) : 안녕하세요 김용원입니다. 오늘은 5 / 2 입니다. 행운을 빕니다.
 ~~~~
 */
-
+function greeting(_object){
+    //object - loop.
+    var result = '';
+    //for 반복문을 이용한 object 값 구하기.
+    var keys = Object.keys(_object); //object 의 key 배열. ["greeting", "myName", "today", ... "luck"];
+    for(var i = 0; i < keys.length; i++){
+        console.log(keys[i], _object[keys[i]]);
+        if(result !== '') result += ' ';
+        result += _object[keys[i]];
+    }
+    //for ... in 반복문을 이용한 object 값 구하기.
+    for(var key in _object){
+        if(result !== '') result += ' ';
+        // result += _object[key]; //result = result + _object[key];
+        //console.log(key, _object[key]);
+    }
+    return result;
+}
+var _message = {
+    greeting : '안녕하세요',
+    myName : '김용원입니다.',
+    today : '오늘은',
+    month : 5,
+    separate : '/',
+    day : 2,
+    is : '입니다.',
+    luck : '행운을 빕니다.'
+}
+var greetingMessage = greeting(_message);
+console.log(greetingMessage);
+// greeting({
+//     greeting : '안녕하세요',
+//     myName : '김용원입니다.',
+//     today : '오늘은',
+//     month : 5,
+//     separate : '/',
+//     day : 2,
+//     is : '입니다.',
+//     luck : '행운을 빕니다.'
+// });
 
 /*
 Quest 5.
 1. html 문서의 title을 '학번_이름' 으로 변경합니다.
 */
-
+document.title = "20190000_김용원";
 
 /*
 Quest 6.
@@ -84,7 +153,21 @@ Quest 6.
 (2) : 이름이 입력되었습니다.
 ~~~~
 */
-
+var $btnStudentNumber = document.getElementById("btn-student-number");
+var $btnStudentName = document.querySelector("button#btn-student-name");
+$btnStudentNumber.addEventListener('click', function(event) {
+    event.preventDefault();
+    var $spanStudentNumber = document.getElementById("student-number");
+    $spanStudentNumber.innerText = "20190000";
+    alert("학번이 입력되었습니다.");
+});
+$btnStudentName.addEventListener('click', onClickBtnStudentName);
+function onClickBtnStudentName(event) {
+    event.preventDefault();
+    var $spanStudentName = document.querySelector("span#student-name");
+    $spanStudentName.innerText = "김용원";
+    alert("이름이 입력되었습니다.");
+}
 
 /*
 Quest 7.
@@ -97,7 +180,27 @@ Quest 7.
 (1)의 숫자가 5일 경우 : 1, 3, 5.
 ~~~~
 */
-
+var $btnOdd = document.getElementById("btn-odd");
+$btnOdd.addEventListener('click', onClickBtnOdd);
+function onClickBtnOdd(evt) {
+    evt.preventDefault();
+    var number = prompt("숫자를 입력해주세요.");
+    var result = '';
+    if(number !== null && number !== '' && !isNaN(Number(number))){
+        //OK 를 눌렀고, 문자열이 기입되었을 때 & 숫자만 체크.
+        number = Number(number);
+        for(var i = 0; i <= number; i++){
+            if(i % 2 === 1){
+                if(result !== '') result += ', ';
+                result += i;
+            }
+            // if(i === number) result += '.';
+        }
+        result += '.';
+    }
+    var $divOddResult = document.querySelector("div#odd-result");
+    $divOddResult.innerText = result;
+}
 
 /*
 Quest 8.
@@ -112,14 +215,47 @@ Quest 8.
 (1)의 숫자가 5일 경우 : <li>1</li><li>2</li><li>3</li><li>4</li><li>5</li>
 ~~~~
 */
-
+var $btnAddItem = document.querySelector("button#btn-add-item");
+$btnAddItem.addEventListener("click", onClickBtnAddItem);
+function onClickBtnAddItem(e) {
+    e.preventDefault();
+    var number = prompt("숫자를 입력해주세요.");
+    var $ulList = document.querySelector("ul#list");
+    if(number !== null && number !== '' && !isNaN(Number(number))){
+        $ulList.innerHTML = ''; //요소의 HTML 내용 지우기.
+        number = Number(number);
+        for(var i = 0; i < number; i++){
+            var $li = document.createElement("li"); // 가상의 <li></li> 생성.
+            $li.classList.add("item"); // $li.className = "item";
+            $li.innerText = i + 1;
+            $ulList.appendChild($li);
+        }
+    }
+}
 
 /*
 Quest 9.
 1. button#btn-color-1 를 클릭할 경우, 'box' 라는 클래스 이름을 가진 모든 div 요소의 배경색 스타일을 'red', 글자색 스타일을 'white' 로 변경합니다.
 2. button#btn-color-2 를 클릭한 경우, 'box' 라는 클래스 이름을 가진 div 요소 중 3번째 요소의 배경색 스타일을 'blue', 글자색 스타일을 'black' 으로 변경합니다.
 */
-
+var $btnColor1 = document.querySelector("button#btn-color-1");
+var $btnColor2 = document.querySelector("button#btn-color-2");
+$btnColor1.addEventListener("click", onClickBtnColor1);
+$btnColor2.addEventListener("click", onClickBtnColor2);
+function onClickBtnColor1(e) {
+    e.preventDefault();
+    var $boxs = document.getElementsByClassName("box");
+    for(var i = 0; i < $boxs.length; i++){
+        $boxs[i].style.backgroundColor = "red";
+        $boxs[i].style.color = "white";
+    }
+}
+function onClickBtnColor2(e) {
+    e.preventDefault();
+    var $boxs = document.querySelectorAll("div.box");
+    $boxs[2].style.backgroundColor = "blue";
+    $boxs[2].style.color = "black";
+}
 
 /*
 Quest 10.
@@ -140,4 +276,53 @@ Quest 10.
 ★★★
 ~~~~
 */
-
+var $btnStar = document.querySelector("button#btn-star");
+$btnStar.addEventListener("click", onClickBtnStar);
+function onClickBtnStar(e) {
+    e.preventDefault();
+    var number = prompt("숫자를 입력해주세요.");
+    var result = '';
+    if(number !== null && number !== '' && !isNaN(Number(number))){
+        //★☆
+        //반복문의 반복문.
+        number = Number(number);
+        //5.
+        for(var i = 0; i < number; i++){
+            result += getStar(number, i);
+            // for(var j = 0; j < number; j++){
+            //     if(i >= j){
+            //         result += '★';
+            //     }else{
+            //         result += '☆';
+            //     }
+            // }
+            result += '\n'; //줄바꿈.
+        }
+        i = i - 2;
+        for(i; i >= 0; i--){
+            result += getStar(number, i);
+            // for(var j = 0; j < number; j++){
+            //     if(i >= j){
+            //         result += '★';
+            //     }else{
+            //         result += '☆';
+            //     }
+            // }
+            result += '\n';
+        }
+        var $preStarResult = document.querySelector("pre#star-result");
+        $preStarResult.innerHTML = result;
+        // console.log(result);
+    }
+}
+function getStar(number, i){
+    var result = '';
+    for(var j = 0; j < number; j++){
+        if(i >= j){
+            result += '★';
+        }else{
+            result += '☆';
+        }
+    }
+    return result;
+}
