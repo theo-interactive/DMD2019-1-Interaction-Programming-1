@@ -1,3 +1,4 @@
+
 /*
 Quest 1.
 1. js 폴더와 폴더 내부에 script.js 파일 생성하고 index.html 에 script.js 외부 파일을 로드합니다.
@@ -8,7 +9,7 @@ Quest 1.
 Hello, world!
 ~~~~
 */
-
+// console.log("Hello. world!");
 
 /*
 Quest 2.
@@ -24,7 +25,6 @@ array = ['Iron Man', 'Captain America', 'Hulk', 'Thor', 'Spider-Man'];
 ~~~~
 */
 
-
 /*
 Quest 3.
 1. 입력된 전달인자가 숫자(Number) 타입인 경우 true, 문자(String) 타입인 경우 false 를 반환하는 함수를 작성합니다.
@@ -37,7 +37,6 @@ func(5) : true
 func('text') : false
 ~~~~
 */
-
 
 /*
 Quest 4.
