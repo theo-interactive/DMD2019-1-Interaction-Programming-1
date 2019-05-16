@@ -97,12 +97,10 @@ input, select {
 :root{
     --global-header-height:40px
 }
-@media only screen and (max-width:768px) {
-    :root{
-        --global-header-height:80px
-    }   
-}
 html{}
+body::after{
+    content:'';display:block;position:fixed;z-index:9999;top:0;left:0;width:100px;height:20px;background-color:blue;color:white
+}
 body{
     position:relative;
     color:#000;
@@ -139,3 +137,45 @@ viewport 의 height : 100vh === (js) window.innerHeight
 /* #main .section:first-child .section-content{padding-top:40px} */
 #main .section:first-child .section-content{padding-top:var(--global-header-height)}
 
+@media only screen and (max-width:768px) {
+    :root{
+        --global-header-height:80px
+    }   
+}
+@media only print {
+    /* 화면을 인쇄할 때의 스타일을 지정 */
+    #global-header{display:none !important;visibility:hidden !important}
+    #global-footer{display:none !important;visibility:hidden !important}
+    a{color:#000;text-decoration:none !important}
+}
+@media only screen {
+
+}
+/*
+@media only screen and (조건) {
+
+}
+min-width max-width min-height max-height...
+*/
+/* 브라우저 화면의 가로폭이 1024px 보다 커지면 안의 스타일이 변경.
+1024px ~ 무한.
+*/
+@media only screen and (min-width:1024px) {
+    body::after{content:'1024px ~'}
+}
+/* 브라우저 화면의 가로폭이 1023px 보다 작은 경우 안의 스타일이 변경.
+0px ~ 1023px
+*/
+@media only screen and (max-width:1023px) {
+    body::after{content:'~ 1023px'}
+    #global-header{background-color:purple}
+    #gn-list li a{color:yellow}
+}
+/* 브라우저 화면의 가로폭이 768px ~ 1023px 의 스타일이 변경. */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    body::after{content:'768px ~ 1023px'}
+    #global-header{background-color:yellow}
+    #global-header #global-nav{padding-right:60px;padding-left:60px}
+    #global-nav #gn-list{margin-right:-20px;margin-left:-20px}
+    #gn-list li a{color:purple}
+}
