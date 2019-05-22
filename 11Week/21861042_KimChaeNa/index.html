@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Tab Menu</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0}
+    body{font-family:'Roboto', sans-serif;
+    padding-top: 30px;
+    overflow:scroll;
+    color: white;
+    background-color: black;
+    font-family: 'Noto Serif KR', serif;
+    background-image: url(img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    }
+    img{display:block;margin: auto;}
+    h1{text-align: center;margin-bottom: 15px;}
+    a{text-decoration:none}
+    ul{list-style-type:none}
+    .tab-menu{width:1000px;margin:0 auto;margin-top:50px}
+    .tab-menu ul{display:flex}
+    .tab-menu li{flex:1;height:30px}
+    .tab-menu li a{position:relative;display:block;width:100%;height:100%;background-color:#999;text-transform:uppercase;text-align:center;color:#fff;line-height:30px}
+    .tab-menu li a.selected{background-color:#000;cursor:default}
+    .tab-container{width:1000px;margin:0 auto;box-sizing:border-box}
+    .tab-container .tab-content{display:none;padding:30px;height:780px;box-sizing:border-box}
+     .tab-container .tab-content.selected{display:block} 
+    h4{margin-top: 30px;}
+     #tex1{
+       margin-top: 10px;
+       margin-bottom: 30px;
+       text-align: left;
+     }
+
+
+     .container {
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10%;
+  margin-bottom: 10%;
+}
+
+
+
+.service-details {
+	/*width: 460px;*/
+	height: 250px;	
+	/*height: 230px;*/
+	overflow: hidden;
+	position: relative;
+}
+
+.service-details img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: inherit;
+	width: auto;
+	height: 100%;
+	float: left;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s;
+
+}
+
+.service-details:hover img {
+	opacity: 0.4;
+}
+
+.service-details .service-hover-text h3 {
+	padding: 0px;
+	margin: 0px;
+	font-size: 25px;
+  font-weight:300;
+  font-family: "Open Sans";
+  text-align:left;
+}
+
+.service-details .service-hover-text h4 {
+	padding: 0px;
+	padding-bottom: 13px;
+	margin: 0px;
+	font-size: 14px;
+  letter-spacing: 3px;
+	width: 90%;
+  text-transform:uppercase;
+  border-bottom: 2px solid #000;
+  text-align:left;
+}
+
+.service-details .service-hover-text p {
+	padding-top: 13px;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: "Open Sans";
+}
+
+
+.service-details .service-hover-text{
+	width: 42%;
+	height: 89%;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	padding: 3% 4%;
+	background: rgba(223, 218, 241, 0.644);
+	color: rgba(255,255,255,1);
+/*	display: none;*/
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.4s;
+}
+
+.service-details:hover .service-hover-text {
+	display: block !important;
+	color: rgba(255,255,255,1);
+	background: rgba(223, 218, 241, 0.644);
+	left: 0px;
+	top: 0px;
+}
+
+
+.service-details .service-text {
+	width: 50%;
+	height: inherit;
+	background: #000;
+	float: left;
+	position: absolute;
+	left: 50%;
+}
+
+.service-details .service-text p {
+	padding:100px 0px 0px 20px;
+	font-size: 24px;
+	font-family: "Open Sans";
+  font-weight:700;
+	color: #fff;
+}
+
+
+
+
+.service-details .service-text {
+	float: left;
+} 
+
+.service-white {
+	background: #eee ;
+	width: 50%;
+	height: inherit;
+}
+
+.service-white p {
+	color: #000;
+}
+
+#song{margin-top: 20px; margin-bottom: 20px;}
+
+
+  </style>
+</head>
+<body>
+    <embed src='viva la vida.mp3' autostart='true' hidden='true' volume='0' loop='0'>
+  <h1>ColdPlay</h1>
+
+
+  <div id="tab-menu" class="tab-menu">
+      <ul>
+        <li><a href="#" class="selected">About ColdPlay</a></li>
+        <li><a href="#">Members</a></li>
+        <li><a href="#">Viva la vida</a></li>
+        <li><a href="#">Video</a></li>
+      </ul>
+  </div>
+  <div class="tab-container">
+    <div class="tab-content selected">
+<img src="img/img1.png">
+      <h4>ColdPlay</h4>
+
+      <p id="tex1">1997년 영국 런던에서 결성된 얼터너티브 록밴드로, 오아시스의 부진과 라디오헤드의 음악적 고립으로 침체된 브리티시 록 음악 장르의 
+        대안으로 떠오른 록밴드이다. <br>
+        초기엔 트래비스와 라디오헤드가 보여준 음악과 비슷하였지만 갈수록 자신들만의 스타일을 확립시켜나가 평단과 대중의 호평을 동시에 받았던 몇안되는 밴드였다.<br>
+
+      또한 2000년대 상업적으로 가장 성공한 밴드로 꼽히며, 2000년 이후 밴드들 중 압도적인 판매고와 가장 높은 스트리밍 수치를 기록중이다.
+    </p>
+
+    </div>
+    <div class="tab-content">
+
+            <div class="container">
+                <div class="service-details">
+                  <img src="img/martin.jpg" width="100%">
+                  <div class="service-hover-text">
+                    <h3>Chris Martin</h3>
+                    <h4>Vocal</h4>
+
+                  </div>
+                  <div class="service-white service-text">
+                    <p>Chris Martin</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="container">
+                  <div class="service-details">
+                    <img src="img/jony.jpg" width="100%">
+                    <div class="service-hover-text">
+                      <h3>Jonny Buckland</h3>
+                      <h4>guitarist</h4>
+  
+                    </div>
+                    <div class="service-white service-text">
+                      <p>Jonny Buckland</p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <div class="container">
+                    <div class="service-details">
+                      <img src="img/gut.jpg" width="100%">
+                      <div class="service-hover-text">
+                        <h3>Guy Berryman</h3>
+                        <h4>bassist</h4>
+    
+                      </div>
+                      <div class="service-white service-text">
+                        <p>Guy Berryman</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="container">
+                      <div class="service-details">
+                        <img src="img/will.jpg" width="100%">
+                        <div class="service-hover-text">
+                          <h3>William Champion</h3>
+                          <h4>drummer</h4>
+      
+                        </div>
+                        <div class="service-white service-text">
+                          <p>William Champion</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+    </div>
+    <div class="tab-content">
+
+
+      <div id="song-box">
+
+
+      <img src="img/viva la diva cover.jpg">
+      <h2>Viva la vida</h2><hr>
+
+
+      <p id="song">  
+        (Ooohh Ooohh Ooohh Ooohh)<br><br>
+
+
+        I used to rule the world <br>
+        난 세상을 지배했었네<br>
+        <br>
+        
+        Seas would rise when I gave the word <br>
+        바다도 내 명령에 물러서곤 했지<br>
+        <br>
+        Now in the morning I sleep alone <br>
+        이젠 아침에 홀로 잠들고<br>
+        <br>
+        Sweep the streets I used to own <br>
+        내 것이었던 거리를 청소하네<br>
+        <br>
+        
+        I used to roll the dice <br>
+        내가 진군을 명령하면<br>
+        <br>
+        Feel the fear in my enemy's eyes <br>
+        적들은 두려움에 떨었건만<br>
+        <br>
+        Listen as the crowd would sing <br>
+        이제 백성들의 노래가 들리네<br>
+        <br>
+        "Now the old king is dead! Long live the king!" <br>
+        "폭군이 죽었으니 새 왕께 만세!"<br>
+        <br>
+        
+        One minute I held the key <br>
+        열쇠를 쥐고 있던 나<br>
+        <br>
+        Next the walls were closed on me<br>
+        이젠 방에 갇힌 신세 되어<br>
+        <br>
+        And I discovered that my castles stand<br>
+        이제야 깨닫네 나의 성은<br>
+        <br>
+        Upon pillars of salt and pillars of sand<br>
+        소금과 모래로 된 기둥 위에 서 있음을<br>
+        <br>
+        
+        I hear Jerusalem bells a ringing<br>
+        예루살렘의 종소리와<br>
+        <br>
+        Roman Cavalry choirs are singing<br>
+        로마 기병대의 합창이 들리네<br>
+        <br>
+        Be my mirror, my sword and shield<br>
+        내 거울과 검과 방패가 되어 주오<br>
+        <br>
+        My missionaries in a foreign field<br>
+        이방의 내 선교사들이여<br>
+        <br>
+        <br>
+        For some reason I can't explain<br>
+        말로 설명할 순 없지만<br>
+        <br>
+        Once you go there was never<br>
+        저 높은 곳에 앉으면<br>
+        <br>
+        Never an honest word<br>
+        진실함은 존재하지 않네<br>
+        <br>
+        And that was when I ruled the world<br>
+        내가 통치하던 그때처럼<br>
+        <br>
+        <br>
+        It was the wicked and wild wind<br>
+        그 악하고 거세던 바람<br>
+        <br>
+        Blew down the doors to let me in<br>
+        날 그 문으로 밀어넣었네<br>
+        <br>
+        Shattered windows and the sound of drums <br>
+        창문이 부숴지고 북소리가 들리고<br>
+        <br>
+        People couldn't believe what I'd become<br>
+        나도 날 감당할 수 없었지<br>
+        <br>
+        <br>
+        Revolutionaries wait<br>
+        혁명가들은 기다리네<br>
+        <br>
+        For my head on a silver plate<br>
+        은쟁반에 올려진 내 머리<br>
+        <br>
+        Just a puppet on a lonely string<br>
+        외줄에 매달린 꼭두각시여<br>
+        <br>
+        Oh who would ever want to be king?<br>
+        그 누가 왕이 되고 싶어 하려나?<br>
+        <br><br>
+        
+        I hear Jerusalem bells a ringing<br>
+        예루살렘의 종소리와<br>
+        <br>
+        Roman Cavalry choirs are singing<br>
+        로마 기병대의 합창이 들리네<br>
+        <br>
+        Be my mirror, my sword and shield<br>
+        내 거울과 칼과 방패가 되어 주오<br>
+        <br>
+        My missionaries in a foreign field<br>
+        이방의 내 선교사들이여<br>
+        <br>
+        For some reason I can't explain <br>
+        말로 설명할 순 없지만<br>
+        <br>
+        I know Saint Peter won't call my name<br>
+        성 베드로가 내 이름을 부르진 않겠지<br>
+        <br>
+        Never an honest word<br>
+        진실함은 존재하지 않네<br>
+        <br>
+        But that was when I ruled the world<br>
+        내가 통치하던 그때처럼<br>
+        <br>
+        Ooohh Ooohh Ooohh Ooohh<br>
+        <br><br>
+        
+        I hear Jerusalem bells a ringing<br>
+        예루살렘의 종소리와<br>
+        <br>
+        Roman Cavalry choirs are singing<br>
+        로마 기병대의 합창이 들리네<br>
+        <br>
+        Be my mirror, my sword and shield<br>
+        내 거울과 칼과 방패가 되어 주오<br>
+        <br>
+        My missionaries in a foreign field<br>
+        이방의 내 선교사들이여<br>
+        　<br><br>
+      
+        For some reason I can't explain <br>
+        말로 설명할 순 없지만<br>
+        <br>
+        I know Saint Peter won't call my name<br>
+        성 베드로가 내 이름을 부르진 않겠지<br>
+        <br>
+        Never an honest word<br>
+        진실함은 존재하지 않네<br>
+        <br>
+        But that was when I ruled the world<br>
+        내가 통치하던 그때처럼<br>
+        </p>
+  </div>
+
+    </div>
+    <div class="tab-content">
+
+
+      <video width="100%" controls>
+        <source src="Viva La Vida.mp4" type="video/mp4">
+    </video>
+
+      
+    </div>
+  </div>
+
+  
+  <script type="text/javascript">
+    var $tabMenu = document.querySelector("#tab-menu");
+    var $tabMenuEl = $tabMenu.querySelectorAll("a");
+    var $tabcontent = document.getElementsByClassName('tab-content');
+    //console.log($tabMenu, $tabMenuEl);
+    //console.log($tabcontent);
+    for(var i =0; i<$tabMenuEl.length;i++){
+      tabMenuClick(i);
+      }
+
+      function tabMenuClick(index){
+        //i의 순서를 체크할 수 있게 index의 전달인자로 할당
+        $tabMenuEl[index].addEventListener('click',function(e){
+        e.preventDefault();
+        console.log(index);
+        for(var i = 0; i<$tabMenuEl.length; i++){
+          $tabMenuEl[i].classList.remove('selected');
+          $tabcontent[i].classList.remove('selected');
+        if(i===index){
+          //for 반복문이 실행될떄 자신의 순서와 i의 일치 여부를 체크
+          //같은 경우에 .selected를 요소에 추가
+          $tabMenuEl[i].classList.add('selected');
+          $tabcontent[i].classList.add('selected');
+          }
+        }
+        
+        /*
+        for(var i = 0; i<$tabcontent.length; i++){
+          $tabcontent[i].classList.remove('selected');
+          if(i===index){
+            $tabcontent[i].classList.add('selected');
+          }
+        }
+        */
+
+        });
+        
+      }
+      
+  </script>
+</body>
+</html>
