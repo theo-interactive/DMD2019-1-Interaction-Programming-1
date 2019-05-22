@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Tab Menu</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    *{margin:0;padding:0}
+    body{font-family:'Roboto', sans-serif}
+    a{text-decoration:none}
+    ul{list-style-type:none}
+    .tab-menu{width:800px;margin:0 auto;margin-top:50px}
+    .tab-menu ul{display:flex}
+    .tab-menu li{flex:1;height:30px}
+    .tab-menu li a{position:relative;display:block;width:100%;height:100%;background-color:#999;text-transform:uppercase;text-align:center;color:#fff;line-height:30px}
+    .tab-menu li a.selected{background-color:#000;cursor:default}
+    .tab-container{box-sizing:border-box}
+    .tab-container .tab-content{display:none;box-sizing:border-box}
+    .tab-container .tab-content.selected{display:block} 
+
+    
+  </style>
+   <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="tab-menu" class="tab-menu">
+      <ul>
+        <li><a href="#" class="selected">Tab 1</a></li>
+        <li><a href="#">Tab 2</a></li>
+        <li><a href="#">Tab 3</a></li>
+        <li><a href="#">Tab 4</a></li>
+      </ul>
+  </div>
+  <div class="tab-container">
+    <div class="tab-content selected">     
+        <h1>My Awesome Shots</h1>
+        <main>
+            <div class="card">
+                <div class="info">
+                    <strong class="title">My Title</strong>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur sapiente ipsam nihil velit quae ab unde quasi exercitationem esse</p>        
+                </div>
+                <img src="http://freeaussiestock.com/free/Victoria/Melbourne/slides/fed_square.jpg">
+            </div>
+            <div class="card">
+                <div class="info">
+                    <strong class="title">My Title</strong>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur sapiente ipsam nihil velit quae ab unde quasi exercitationem esse</p>        
+                </div>
+                <img src="https://media.defense.gov/2013/Jul/16/2000032379/-1/-1/0/130628-F-DQ639-002.JPG">
+            </div>
+            <div class="card">
+                <div class="info">
+                    <strong class="title">My Title</strong>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur sapiente ipsam nihil velit quae ab unde quasi exercitationem esse</p>        
+                </div>
+                <img src="https://s0.geograph.org.uk/geophotos/03/25/64/3256477_ec7d83ab.jpg">
+            </div>
+            <div class="card">
+                <div class="info">
+                    <strong class="title">My Title</strong>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur sapiente ipsam nihil velit quae ab unde quasi exercitationem esse</p>        
+                </div>
+                <img src="http://freeaussiestock.com/free/Victoria/Melbourne/slides/melbourne_museum_roof.jpg">
+            </div>
+            <div class="card">
+                <div class="info">
+                    <strong class="title">My Title</strong>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur sapiente ipsam nihil velit quae ab unde quasi exercitationem esse</p>        
+                </div>
+                <img src="https://live.staticflickr.com/2387/1726578675_62f09cb233_z.jpg">
+            </div>
+            <div class="card">
+                <div class="info">
+                    <strong class="title">My Title</strong>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur sapiente ipsam nihil velit quae ab unde quasi exercitationem esse</p>        
+                </div>
+                <img src="https://s0.geograph.org.uk/geophotos/04/31/24/4312454_79d0a1d8.jpg">
+            </div>
+        </main>
+    </div>
+    <div class="tab-content">
+        <h1>메탈슬러그 시리즈</h1>
+    <main>
+        <div class="card">
+            <div class="info">
+                <strong class="title">Metal Slug</strong>
+                <img src="./img/metal_slug1.jpg">
+                <p class="desc"> '페레그린 팔콘스', 통칭 PF대에 지령이 하달되었다. '소수인원의 부대 편성으로, 원수 반란군의 거점만을 노려 공격, 파괴하라. 
+                  빼앗긴 메탈슬러그는 기밀 보관 유지를 위해 탈환하되, 곤란한 경우 부득이하지만 파괴한다.' 실패가 용납되지 않는 이 임무에 마르코와 타마, 두 명의 병사가 선택되었다. 지금 바로 둘의 모덴원수 토벌전이 시작된다
+                  </p>        
+            </div>
+            
+        </div>
+        <div class="card">
+            <div class="info">
+                <strong class="title">Metal Slug2</strong>
+                <img src="./img/metal_slug2.jpg">
+                <p class="desc">2년의 세월로도 모덴의 그림자를 지워낼 수 없었던 것일까? 하지만 아무리 모덴이라도 이렇게 단기간에 두 번째 쿠데타를 준비하는 것 같은 건 불가능하다. 
+                  과연 모덴은 살아 있긴 한 것인가? 만일 살아있다면 어떤 수단으로, 언제 쿠데타를 개시할 것인가? 그리고 이렇게 단 기간에 쿠데타를 준비할 수 있게 한 비밀은...?
+                  모덴이 살아 있다면, 이번에야말로 숨통을 끊어버린다.</p>        
+            </div>
+            
+        </div>
+        <div class="card">
+            <div class="info">
+                <strong class="title">Metal Slug3</strong>
+                <img src="./img/metal_slug3.jpg">
+                <p class="desc">모덴군 잔당은 지금 여전히 세계 각지에 잠복하고 있다.모덴은 살아있었다. 그리고 그는 야망을 포기하지 않았다.
+                    새로운 전쟁의 서곡이 울려퍼지고 있다는 것은, 그 누구도 예상하지 못했다. 그 서곡은 너무 가냘퍼서 알아듣기란 어려웠다. 그리고 그 전쟁의 최정점은 전례없는 격렬함을 동반하고 있다.
+                    모덴군 잔당과 괴사건 사이에 무엇인가 관련이 있다
+                </p>        
+            </div>
+            
+        </div>
+        <div class="card">
+            <div class="info">
+                <strong class="title">Metal Slug6</strong>
+                <img src="./img/metal_slug6.jpg">
+                <p class="desc">사람들이 잠깐의 평화에 취해 있던 중, 이전보다 강화된 정보부에 요새 믿기 어려운 정보가 계속 들어왔다. 미확인 비행물체, 우주인, 대형생물을 목격, 그 배후에는 화성인이나 모덴의 그림자가 느껴졌다
+                    결정적인 소식이 정규군에 전해졌다. 모덴군 같은 한 무리가 병기를 모으고 취락을 형성해 산악지대에 잠복하고 있다는 것이었다. 
+                    다만 그 속에서 모덴 원수의 모습은 확인되지 않았고, 잠복한 목적도 확실히 보이지 않았다. 현 시점에서는, 모덴군이라는 확증조차 얻지 못한 것이다.
+                    과연 그 진실은?
+                </p>        
+            </div>
+            
+        </div>
+        <div class="card">
+            <div class="info">
+                <strong class="title">Metal Slug4</strong>
+                <img src="./img/metal_slug4.jpg">
+                <p class="desc">각국의 군사 주요 시스템의 매수를 목적으로 한 컴퓨터 바이러스 '화이트·베이비'의 탄생과 활동을 예고하는 성명이 인터넷상에서 고지되었던 것이다... 
+                  모든 보안망을 돌파한다는 '화이트·베이비」'를 낳은 것은, '아마데우스 신으로부터 사랑받는 자'라는 테러 조직이었다.
+                  또한, 정보를 수집한 결과, 특수공작부대 앞으로 위성화상이 전송되었다. 거기에는 '아마데우스' 일원으로 보이는 몇몇 인물들이 비쳐있었지만, 
+                  그 중 한 명의 얼굴에 그 자리에 있던 이들은 전부 경악했다. 데빌 리버스 모덴이 비쳐 있었던 것이다!</p>        
+            </div>
+            
+        </div>
+        <div class="card">
+            <div class="info">
+                <strong class="title">Metal Slug5</strong>
+                <img src="./img/metal_slug5.jpg">
+                <p class="desc">개발을 실행하고 있던 정규군 SV 계획 연구소가 누군가의 습격을 받아 메탈슬러그의 기밀이 저장된 디스크를 강탈당한다.
+                  한편, 세계 각지에서 유적을 파괴하고 있는 조직을 조사하던 정보국 소속 특수공작부대 스패로우즈의 대원인 에리와 피오는 안룬 유적의 최심부에 보존되어 있는 보물을 훔쳐가는 장면을 목격하게 된다. 두 명이서 이들을 추격하려 했지만, 상대측의 압도적인 화력에 어쩔 수 없이 퇴각하고 만다.
+                  그리고, 이 두사람의 퇴로를 막은 것은 정규군에서는 본 적이 없는 일그러진 메탈슬러그와 뭔가 불안한 레이저를 발사하는 이족보행병기로 이루어진 혼성부대였다.
+                  서로 다른 2가지 사건은 공교롭게도 메탈슬러그라는 공통점을 통해서 하나로 얽히게 된다.</p>        
+            </div>
+            
+        </div>
+    </main>
+    </div>
+    <div class="tab-content">
+        <div class="gallery" id = "gallery">
+            <div class="photo"><img src="https://source.unsplash.com/300x300"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/301x301"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/302x302"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/303x303"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/304x304"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/305x305"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/306x306"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/307x307"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/308x308"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/309x309"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/3010x3010"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/3011x3011"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/3012x3012"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/3013x3013"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/3014x3014"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/3015x3015"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/3016x3016"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/3017x3017"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/3018x3018"/></div>
+            <div class="photo"><img src="https://source.unsplash.com/3019x3019"/></div>
+          </div>
+
+    </div>
+    <div class="tab-content">
+     4
+    </div>
+  </div>
+  
+  
+  <script type="text/javascript">
+    var $tabMenu = document.querySelector("#tab-menu");
+    var $tabMenuEl = $tabMenu.querySelectorAll('a'); //list. [... ... ... ...];
+    var $tabContent = document.getElementsByClassName('tab-content'); //list [... ... ... ...];
+    // console.log($tabMenu, $tabMenuEl);
+    // console.log($tabContent);
+    for(var i = 0; i < $tabMenuEl.length; i++){
+      tabMenuClick(i);
+    }
+    function tabMenuClick(index){
+      //i 의 순서를 체크할 수 있게 index 의 전달인자로 할당.
+      $tabMenuEl[index].addEventListener('click', function(e) {
+        e.preventDefault();
+        for(var i = 0; i < $tabMenuEl.length; i++){
+          //모든 요소에서 .selected 를 삭제.
+          $tabMenuEl[i].classList.remove('selected');
+          $tabContent[i].classList.remove('selected');
+          if(i === index){
+            //for 반복문이 실행될 때, 자신의 순서와 i 의 일치 여부를 체크.
+            //같은 경우에 .selected 를 요소에 추가.
+            $tabMenuEl[i].classList.add('selected');
+            $tabContent[i].classList.add('selected');
+          }
+        }
+        // for(var i = 0; i < $tabContent.length; i++){
+        //   $tabContent[i].classList.remove('selected');
+        //   if(i === index){
+        //     $tabContent[i].classList.add('selected');
+        //   }
+        // }
+      });
+    }
+  </script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
