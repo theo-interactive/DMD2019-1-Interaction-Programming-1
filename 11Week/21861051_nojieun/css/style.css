@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+    *{margin:0;padding:0}
+    body{font-family:'Roboto', sans-serif;background-color: #FCA0D6}
+    a{text-decoration:none}
+    ul{list-style-type:none}
+    .tab-menu{width:100px;margin:0;margin-top:50px;position: relative; left: 1050px}
+    .tab-menu ul{display:block}
+    .tab-menu li{width:100px;height: 100px}
+    .tab-menu li a{position:relative;display:block;width:100%;height:100%;text-transform:uppercase;text-align:center;color:#fff;line-height:30px}
+    .tab-menu li a.selected{background-color:#FF5AC0;cursor:default}
+    .tab-container{width:800px;margin:0 auto;position:relative; left:-50px;top:-400px;/*overflow: hidden;*/background-image: url("../img/contentBack.png");background-size: 800px;box-shadow:-6px 6px 5px #FF5AC0}
+    .tab-container .tab-content{display:none;height:500px;box-sizing:border-box;}
+    .tab-container .tab-content.selected{display:block} 
+    #folder1{background-image: url("../img/folder1.png"); background-size: 100px}
+    #folder1:active{background-image: url("../img/heart.png"); background-size: 100px}
+    #folder2{background-image: url("../img/folder2.png"); background-size: 100px}
+    #folder2:active{background-image: url("../img/heart.png"); background-size: 100px}
+    #folder3{background-image: url("../img/folder3.png"); background-size: 100px}
+    #folder3:active{background-image: url("../img/heart.png"); background-size: 100px}
+    #folder4{background-image: url("../img/folder4.png"); background-size: 100px}
+    #folder4:active{background-image: url("../img/heart.png"); background-size: 100px}
+    #warp{min-width:1280px; max-width: 1280px; height: 0}
+    #contentImg{margin:48px 0px 0px 15px}
+    #jujup1{position: absolute; top: 100px; left: -100px}
+    #jujup2{position: absolute; top: 300px; left: 0}
+    #jujup3{position: absolute; top: 150px; left: 500px}
+    #chu{position: absolute; top: 250px; left: 300px;cursor:pointer}
+    #welcomeImg{position: absolute; top: 0px; left: 600px}
+    #pianoImg{position: absolute; top: 400px; left: 0}
+    #jieun1Img{position: absolute; top: 220px; left: 400px}
+    #rocknroll{position: absolute; top: 30px; left: -100px}
+    .minichang{border: solid 10px #3FB4FC; box-shadow:-6px 6px 5px fuchsia}
+    #dickpunks{font-family: 'Permanent Marker', cursive; text-shadow: -6px 6px 5px black;position: relative; top: -100px; left: 100px;color: #FF5AC0;font-size: 100px}
+    #asibal{text-shadow: -6px 6px 5px black;position: absolute; top: 0; left: 100px;color: #FF5AC0;font-size: 100px}
+    #asibal1{color: chartreuse; font-size: 30px}
+    #asibalImg{position: absolute; top: 400px; left: -100px;}
+    #emoji1Img{position: absolute; top: 100px; left: 700px}
+    #omgImg{position: absolute; top: 300px; left: 0px;}
+    #micImg{position: absolute; top: 100px; left: 700px}
+    #bearImg{position: absolute; top: 350px; left: -150px}
+    #sunglass{position: absolute; top: 0; left: -100px; font-size: 70px;color: rgb(255, 32, 170);font-family: 'Black Han Sans', sans-serif;text-shadow: -6px 6px 5px white}
