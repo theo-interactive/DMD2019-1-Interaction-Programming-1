@@ -1,0 +1,135 @@
+$background: #222327;
+$blue: #3490b7;
+$pink: #FF8B87;
+$red: #FF4B47;
+$green: #40E64F;
+$yellow: #E0C93B;
+$orange: #F58F39;
+$duration: 1.4s;
+$num: 9;
+
+@function ring-animation-delay($which){
+  @return $duration / $num * $which;
+}
+
+* {
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: $background;
+  touch-action: none;
+}
+ul {
+  position: absolute;
+  display: block;
+  width: 50vmin;
+  height: 50vmin;
+  transition: all .3s ease;
+  transform: translate3d(-50%,-50%, 0);
+  li {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 4vmin solid $blue;
+    border-radius: 50%;
+    transform: translate3d(0,0,0) scale(1);
+    animation: pressed $duration 0s infinite cubic-bezier(.73,.32,.59,1.4) both, fadeOut $duration 0s infinite ease-in both;
+    
+    &.nth1 {
+      animation-delay: ring-animation-delay(0), ring-animation-delay(0);
+    }
+    &.nth2 {
+      border-color: $red;
+      animation-delay: ring-animation-delay(1), ring-animation-delay(1);
+    }
+    &.nth3 {
+      border-color: $green;
+      animation-delay: ring-animation-delay(2), ring-animation-delay(2);
+    }
+    &.nth4 {
+      border-color: $pink;
+      animation-delay: ring-animation-delay(3), ring-animation-delay(3);
+    }
+    &.nth5 {
+      animation-delay: ring-animation-delay(4), ring-animation-delay(4);
+    }
+    &.nth6 {
+      border-color: $yellow;
+      animation-delay: ring-animation-delay(5), ring-animation-delay(5);
+    }
+    &.nth7 {
+      border-color: $orange;
+      animation-delay: ring-animation-delay(6), ring-animation-delay(6);
+    }
+    &.nth8 {
+      border-color: $green;
+      animation-delay: ring-animation-delay(7), ring-animation-delay(7);
+    }
+    &.nth9 {
+      border-color: $yellow;
+      animation-delay: ring-animation-delay(8), ring-animation-delay(8);
+    }
+    &.nth10 {
+      border-color: $red;
+      animation-delay: ring-animation-delay(9), ring-animation-delay(9);
+    }
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pressed {
+  0% {
+    transform: translate3d(0,0,0) scale(0);
+  }
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+#instruction-text {
+  display: flex;
+  justify-content: center;
+  color: #ededfb;
+  font-size: 5vmin;
+  letter-spacing: .045em;
+  font-family: -apple-system, "Segoe UI", "Helvetica-Neue", sans-serif;
+  height: 90vh;
+  align-items: flex-end;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  animation: fadeIn 8s 0s 2 alternate ease-out;
+  opacity: 0;
+}
+#instruction {
+  top: 50vh;
+  left: 50%;
+  li {
+    animation-iteration-count: 5;
+  }
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
