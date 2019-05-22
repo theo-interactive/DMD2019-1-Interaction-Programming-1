@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{margin:0;padding:0}
+body{font-family:'Roboto', sans-serif; position: relative;}
+a{text-decoration:none}
+ul{list-style-type:none}
+.tab-menu{width:800px;margin:0 auto;margin-top:50px}
+.tab-menu ul{display:flex}
+.tab-menu li{flex:1;height:30px}
+.tab-menu li a{position:relative;display:block;width:100%;height:100%;
+  background-color:rgb(185, 186, 255);text-transform:uppercase;
+  text-align:center;color:#fff;line-height:30px;border-radius: 20px;}
+.tab-menu li a.selected{background-color:#79E5CB;cursor:default;border-radius: 20px;}
+.tab-container{width:800px;margin:0 auto;border:1px solid rgb(255, 255, 255);box-sizing:border-box}
+.tab-container .tab-content{display:none;padding:30px;height:500px;box-sizing:border-box}
+.tab-container .tab-content.selected{display:block}
+
+
+.cen{text-align: center}
+
+#divcenter{margin-left: 313px;}
+#al{width: 300px;}
+
+
+
+#tab2{text-align: center; overflow:auto; height: 500px;}
+.ttl{color:#79E5CB; font-size: 25px; }
+.bon{color: black}
+
+
+
+#Ssubmenu{text-align: center;}
+#Ssubmenu li{list-style: none;
+            /*float: left;
+            border: 0px;*/
+        display : inline-block;}
+
+
+#tem a img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+#tem:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);}
+
+#jong a img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+#jong:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);}
+
+#min a img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+#min:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);}
+
+#key a img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+#key:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);}
+/* 마우스 파티클
+.particle-count {
+  display: block;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.particles > .particle {
+  border-radius: 100%;
+  background: transparent;
+  position: absolute;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.particles > .particle.smaller {
+  width: 5px;
+  height: 5px;
+}
+.particles > .particle.small {
+  width: 10px;
+  height: 10px;
+}
+.particles > .particle.normal {
+  width: 15px;
+  height: 15px;
+}
+.particles > .particle.big {
+  width: 20px;
+  height: 20px;
+}
+.particles > .particle.bigger {
+  width: 25px;
+  height: 25px;
+}*/
