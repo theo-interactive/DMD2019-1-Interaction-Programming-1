@@ -25,6 +25,7 @@ var $tabinTabEl=$tabinTab.querySelectorAll("a");
 var $tabinContent = document.getElementsByClassName("inContent");
 for (var i = 0; i < $tabinTabEl.length; i++) {
     tabinTabClick(i);
+    // tabinTabover(i);
 }
 function tabinTabClick(index){
     $tabinTabEl[index].addEventListener("click", function(e){
@@ -39,7 +40,22 @@ function tabinTabClick(index){
         }
     })    
 }
-
+// function tabinTabover(index){
+//     $tabinTabEl[index].addEventListener('mouseover',function(){
+//         // console.log($tabinTabEl[index]);
+//         // $tabinTabEl[index].classList.remove('intabline');
+//         $tabinTabEl[index].classList.add('intabline');
+//     })
+//     $tabinTabEl[index].addEventListener('mouseout',function(){
+//         // console.log($tabinTabEl[index]);
+//         $tabinTabEl[index].classList.remove('intabline');
+//         // $tabinTabEl[index].classList.add('intabline');
+//     })
+// }
+console.log($tabinTabEl);   
+// $tabinTabEl.addEventListener('mouseover',function(){
+// console.log("로드됨");
+// })
 // inTab2
 var $tabinTab2 = document.querySelector("#inTab2");
 console.log($tabinTab2);
@@ -47,6 +63,7 @@ var $tabinTabEl2=$tabinTab2.querySelectorAll("a");
 console.log($tabinTabEl2);
 var $tabinContent2 = document.getElementsByClassName("inContents");
 for (var i = 0; i < $tabinTabEl2.length; i++) {
+    // tabinTabover2(i)
     tabinTab2Click(i);
 }
 function tabinTab2Click(index){

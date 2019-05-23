@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Tab Menu</title>
+  <link href="./css/style.css" rel="stylesheet"/>
+  
+</head>
+<body>
+  <h1>
+   Drowning love
+  </h1>
+  <div id="tab-menu" class="tab-menu">
+      <ul>
+        <li><a href="#" class="selected">Trailer</a></li>
+        <li><a href="#">Chracters</a></li>
+        <li><a href="#">Stillcut</a></li>
+        <li><a href="#">movie poster</a></li>
+      </ul>
+  </div>
+  <div class="tab-container">
+    <div class="tab-content selected">
+      <div class="video">
+      <iframe width="560" height="315" src="video/love.mp4" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+      </div>
+      <h2>영화소개</h2>
+      <p>
+      15살의 여름. <br>
+      도쿄에서 멀리 떨어진 시골, 우키구모 마을에 이사 온 인기 모델 모치즈키 나츠메(고마츠 나나). <br>
+      나츠메는 지루하고 심심한 이 마을에서, 오만 할 만큼 격렬하게, 자유로운 코우(스다 마사키)를 보며 <br>
+      반발하면서도 어쩔 수 없는 끌림을 느낀다. 
+      </p>
+    </div>
+    <div class="tab-content">
+      <table id="sen">
+        <td><img src="img/cha1.jpg" width="205" height="170"></td>
+        <td>
+            <div class="intro">
+                <h2>스다 마사키</h2>  
+                <p>주연 | 하세가와 코이치로 역</p>
+            </div>
+        </td>
+      </table>
+      <table id="sen">
+          <td><img src="img/cha2.jpg" width="205" height="170"></td>
+          <td>
+              <div class="intro">
+                  <h2>고마츠 나나</h2>  
+                  <p>주연 | 모치즈키 나츠메 역</p>
+              </div>
+          </td>
+        </table>
+        <table id="sen">
+            <td><img src="img/cha3.jpg" width="205" height="170"></td>
+            <td>
+                <div class="intro">
+                    <h2>시게오카 다이키</h2>  
+                    <p>조연 | 오토모 카츠토시 역</p>
+                </div>
+            </td>
+          </table>
+          <table id="sen">
+              <td><img src="img/cha4.jpg" width="205" height="170"></td>
+              <td>
+                  <div class="intro">
+                      <h2>카미시라이시 모네</h2>  
+                      <p>조연 | 마츠나가 카나 역</p>
+                  </div>
+              </td>
+            </table>
+        
+      
+    </div>
+    <div class="tab-content">
+      <table id="still">
+        <tr><td>#1</td></tr>
+        <tr>
+            <td><img src="img/still1.jpg" width="450" height="300"></td>
+        </tr>
+        <tr><td>#2</td></tr>
+        <tr>
+            <td><img src="img/still2.jpg" width="450" height="300"></td>
+        </tr>
+        <tr><td>#3</td></tr>
+        <tr>
+            <td><img src="img/still3.jpg" width="450" height="300"></td>
+        </tr>
+        <tr><td>#4</td></tr>
+        <tr>
+            <td><img src="img/still4.jpg" width="450" height="300"></td>
+        </tr>
+      </table>  
+    </div>
+    <div class="tab-content">
+      <table id="poster">
+        <tr><td>#1</td></tr>
+        <tr>
+          <td class="pos"><img src="img/poster1.jpg" alt="" width="450" height="600"></td>
+        </tr>
+        <tr><td>#2</td></tr>
+        <tr>
+          <td class="pos"><img src="img/poster4.jpg" alt="" width="450" height="600"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var $tabMenu = document.querySelector("#tab-menu");
+    var $tabMenuEl = $tabMenu.querySelectorAll('a'); //list. [... ... ... ...];
+    var $tabContent = document.getElementsByClassName('tab-content'); //list [... ... ... ...];
+    // console.log($tabMenu, $tabMenuEl);
+    // console.log($tabContent);
+    for(var i = 0; i < $tabMenuEl.length; i++){
+      tabMenuClick(i);
+    }
+    function tabMenuClick(index){
+      //i 의 순서를 체크할 수 있게 index 의 전달인자로 할당.
+      $tabMenuEl[index].addEventListener('click', function(e) {
+        e.preventDefault();
+        for(var i = 0; i < $tabMenuEl.length; i++){
+          //모든 요소에서 .selected 를 삭제.
+          $tabMenuEl[i].classList.remove('selected');
+          $tabContent[i].classList.remove('selected');
+          if(i === index){
+            //for 반복문이 실행될 때, 자신의 순서와 i 의 일치 여부를 체크.
+            //같은 경우에 .selected 를 요소에 추가.
+            $tabMenuEl[i].classList.add('selected');
+            $tabContent[i].classList.add('selected');
+          }
+        }
+        // for(var i = 0; i < $tabContent.length; i++){
+        //   $tabContent[i].classList.remove('selected');
+        //   if(i === index){
+        //     $tabContent[i].classList.add('selected');
+        //   }
+        // }
+      });
+    }
+  </script>
+</body>
+</html>

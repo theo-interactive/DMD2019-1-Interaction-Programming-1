@@ -1,0 +1,60 @@
+/* Reset CSS */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{margin:0;padding:0}
+body{font-family:'Roboto', sans-serif}
+a{text-decoration:none}
+ul{list-style-type:none}
+.tab-menu{width:800px;margin:0 auto;margin-top:50px}
+.tab-menu ul{display:flex}
+.tab-menu li{flex:1;height:30px}
+.tab-menu li a{position:relative;display:block;width:100%;height:100%;background-color:#09305c;text-transform:uppercase;text-align:center;color:#fff;line-height:30px}
+.tab-menu li a.selected{background-color:#000;cursor:default}
+.tab-container{width:800px;margin:0 auto;border:0px solid #000;box-sizing:border-box}
+.tab-container .tab-content{display:none;padding:30px;height:500px;box-sizing:border-box}
+.tab-container .tab-content.selected{display:block} 
+
+#list{
+    margin-top: 14px;
+    font-size: 14.7px;
+    font-family: 'Noto sans';
+    margin-right: 42px;
+}
+#list_2{
+    margin-top: 14px;
+    margin-right: 63px;
+    font-size: 14.7px;
+    font-family: 'Noto sans';
+}
+ table {
+     border-collapse: 
+     collapse;border-spacing: 0;
+ }
+ .pull-right{
+     float: right
+ }
+  .footer{ position:fixed; 
+    left:0px; 
+    bottom:0px; 
+    height:60px; 
+    width:100%; 
+    background:grey; 
+    color: white; }
+
+  li{
+      margin-bottom: 4px;
+      color: #212225;
+  }  
+  a {
+      font-family: 'Open sans';
+  }
+  h2 {
+    font-family: 'Noto sans';
+    color: #212225;
+    font-size: 24px;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 14.7px;
+    color: #212225; 
+    font-family: '윤고딕 740';
+  }

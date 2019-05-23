@@ -89,7 +89,8 @@ ul{list-style-type:none}
 .tab-box .tab-contents {display: none;}
 .tab-box .tab-contents.selected {display: block;}
 .clear{clear: both;}
-
+.intabline{width : 100%;border-bottom: solid 2px #c29c22; transition:all  400ms ease-in-out;}
+.tab-box .tab-contents .inTab a:hover{color: #ffcb1f !important}
 /* inTab 1 - 1 */
 .line{margin : 10px 0 10px 0; border-bottom: solid 1px #c0c0c0; min-width: 780px;}
 .inTab{width: 500px; height: 50px;margin: auto;font-size: 20px;text-align: center;margin-top: 30px;}
@@ -120,6 +121,7 @@ ul{list-style-type:none}
 .inContainer .inContents .font_explanation3 h2{font-size: 50px;color: #4e4e4e;text-align: right; margin-bottom: 30px;}
 .inContainer .inContents .font_explanation3 p{text-align: right;  font-size: 14px;color: #777777}
 .inContainer .inContents .font_explanation3 .download3{text-align: center; display: inline-block; margin-top: 10px; width: 97px; float: right; background-color: yellowgreen; padding: 5px 12px 5px 12px; border-radius: 3px;color: white;cursor: pointer;}
+
 
 /* inTab 2 - 2 */
 .inContainer .inContents .font_ex4{overflow: auto;height: 350px;}
