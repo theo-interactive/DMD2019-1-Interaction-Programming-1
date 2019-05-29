@@ -1,0 +1,174 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+ul, ol, li{list-style: none;}
+.gallery{width: 600px; margin-right: auto; margin-left: auto;
+padding-top: 20px;}
+/*overflow: hidden;  크기가 ㅁ넘으면 슘길려고 포지션 릴리티브 앱솔루트 확인 */
+.gallery .view {overflow: hidden; position: relative; width: 100% ;/*위에 있는 위드값을 받음*/
+height:840px; }
+
+body{
+    background-color: beige;
+}
+
+
+.gallery .view .view-container{position: absolute; top:0; left: 0; width: 100%; height: 100%}
+.gallery .view-container.view-item{float: left; width: 100%; height: 100%;}
+.gallery .view-container::after{content: "";clear: both;display: block; position: relative;}
+/**안에 아무거도 안 넣고 그 안에 대신 클리어 보스를 넣어줌*/
+.gallery .view-item{float: left;}
+.gallery .view-item img{display: inline-block; width: 100%; vertical-align: top;
+object-fit: cover;/*찌그러짐 없이 맞추기 가능*/}
+
+
+/* .list{margin-right: 10px; margin-left: 10px; margin-top: 20px;} */
+.list{margin-right: -180px; margin-left: -5px; margin-top: 20px;} 
+
+.list li{display: inline-block;width: 25%; padding-right: 10px; padding-left: 5px; vertical-align: top;
+box-sizing: border-box;}
+.list li a{display: block; width: 100%; position: relative;}
+.list li a img{display: inline-block; width: 100%; vertical-align: top;}
+
+/* .list li a ::before{contain: ""; display: block; position: absolute;top:0;left: 0; width: 100%;
+height: 100%; background-color: rgba(0,0,0,0.2); opacity: 0.0;} */
+
+.list li a::before{content: ""; display: block; position: absolute;top:0;left: 0; width:10px;
+    height: 10px; border:0 solid black;box-sizing: border-box; transition: 200ms ease-in-out;  }
+.list li.selected a {cursor: default;}
+.list li a:hover::before, .list li.selected a::before{border-width: 2px;}
+
+/*
+*{margin:0;padding:0}
+body{font-family:'Roboto', sans-serif}
+.gallery{width:800px;margin:0 auto;padding-top:80px}
+ul{list-style-type:none}
+.view{position:relative;width:800px;height:500px}
+.view-item{display:none;position:absolute;width:100%}
+.view-item.selected{display:block}
+.view-item img{display:block;width:100%}
+.list{position:relative;width:760px;padding:30px 20px}
+.list li{display:inline-block;width:175px;vertical-align:top}
+.list li + li{padding-left:20px}
+.list li a{display:block;position:relative}
+.list li.selected a{cursor:default}
+.list li.selected a::after{content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:2px solid #000;box-sizing:border-box}
+.list li img{display:block;width:100%}*/
+
+.box1{
+    width: 10px;
+    height: 10px;
+    background-color: #866b63;
+    border-radius: 100%;
+}
+
+
+
+h1{
+    font-size: 30px;
+    z-index: 1000px;
+  margin-left: 250px;
+  margin-top: -10px;
+}
+
+#cursor-dot,#cursor-bg,#progress{overflow:hidden;position:fixed;top:50%;left:50%;box-sizing:border-box;transform:translateX(-50%) translateY(-50%);pointer-events:none}
+#cursor-dot{z-index:600;width:4px;height:4px;border-radius:50%;background-color:#f00}
+#cursor-bg{z-index:400;width:30px;height:30px;border:1px solid #fff;border-radius:50%;transition:width 200ms ease-in-out,height 200ms ease-in-out,background-color 200ms ease-in-out,border-color 200ms ease-in-out}
+#progress{z-index:500;color:#fff;width:30px;height:30px;border-radius:50%;transition:width 200ms ease-in-out}
+#cursor-bg.active{width:60px;height:60px;background-color:rgb(253, 98, 98);border-color:#fff;mix-blend-mode:screen}
+#progress.active{width:60px;height:60px}
+#progress span{display:block;position:absolute;top:50%;left:50%;text-align:center;transform:translateX(-50%) translateY(-50%)}
+#progress.active span::after{content:'select';text-transform:uppercase;font-size:10px;line-height:16px;opacity:0;transition:opacity 200ms ease-in-out}
+#progress.active span::after{opacity:1.0}
