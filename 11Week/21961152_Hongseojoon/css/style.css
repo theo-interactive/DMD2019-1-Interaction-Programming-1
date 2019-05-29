@@ -1,0 +1,259 @@
+/* Reset CSS */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://source.unsplash.com/random);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Roboto-Thin';
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hero-inner {
+  text-align: center;
+  max-width: 600px;
+  height: 850px;
+
+
+}
+
+h1,
+h2 {
+
+  margin: 0;
+  color: white;
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+
+}
+
+h1 {
+
+  text-align: center;;
+  font-size: 3rem;
+  margin: 0 0 2rem;
+  -webkit-animation: animateIn 1000ms ease forwards;
+          animation: animateIn 1000ms ease forwards;
+}
+
+h2 {
+
+  font-weight: 400;
+  font-size: 2rem;
+  -webkit-animation: animateIn 1000ms ease 300ms forwards;
+          animation: animateIn 1000ms ease 300ms forwards;
+
+}
+
+@-webkit-keyframes animateIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*탭 메뉴*/
+ul
+{
+  list-style: none;
+}
+
+.tab_menu{
+
+    width:800px;margin:0 auto;/*이곳은 탭의 길이에 영향을 준다*/
+    margin-top:250px;
+}
+.tab_menu ul{
+
+    display:flex
+}
+.tab_menu li{
+    flex:1;height:30px
+}
+.tab_menu li a{
+
+    position:relative;
+    display:block;
+    width:100%;
+    height:100%;
+    background-color:#2f2e2e;
+    text-transform:uppercase;
+    text-align:center;
+    color:#ebebeb;
+    line-height:30px
+
+}
+.tab-menu li a.selected{
+  opacity: 0.5;
+    background-color:#ded7ce;
+    cursor:default
+}
+
+
+.tab_container
+{
+    width:800px;
+    margin:0 auto;
+    box-sizing:border-box
+}
+.tab_container .tab_content{
+    display:none;
+    padding:30px;
+    height:500px;
+    box-sizing:border-box
+}
+ .tab_container .tab_content.select{
+     display:block
+    }
+.tab_container .tab_content.select #profile {
+    text-align: center;
+}
+
+
+/*하단 image*/
+
+
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+.section {
+  clear: both;
+  padding: 0;
+  margin: 0;
+}
+
+.group:before,
+.group:after {
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+}
+
+.col {
+  display: block;
+  float: center;
+  margin: 0.1% 0 1% 0.1%;/*위치 지정*/
+}
+.col img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  cursor: zoom-in;
+  transition: all 0.3s ease-in-out;
+}
+.col img:hover {
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
+  opacity: 0.8;
+}
+
+.col:first-child {
+  margin-left: 0;
+}
+
+.col-3 {
+  width: 100%;/*카드 크기결정*/
+  height: 90%;
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.25em;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 0px 0px;
+  overflow: hidden;
+}
+
+.card-description {
+  padding: 0.25rem 1rem;
+}
+.card-description h2 {
+  font-weight: 300;
+  color: #7f8c8d;
+  font-size: 1.4em;
+  margin: 0;
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eeeeee;
+}
+.card-description p {
+  color: #7f8c8d;
+  font-weight: 100;
+  font-size: 0.975em;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+@media only screen and (max-width: 45em) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+
+  .col-3 {
+    width: 100%;
+  }
+}
