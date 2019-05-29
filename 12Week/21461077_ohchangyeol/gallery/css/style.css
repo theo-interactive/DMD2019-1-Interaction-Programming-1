@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,time, mark, audio, video {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+body {line-height:1;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block;}
+nav ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none;}
+a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+/* change colours to suit your needs */
+ins {background-color:#ff9;color:#000;text-decoration:none;}
+/* change colours to suit your needs */
+mark {background-color:#ff9;color:#000; font-style:italic;font-weight:bold;}
+del {text-decoration: line-through;}
+abbr[title], dfn[title] {border-bottom:1px dotted;cursor:help;}
+table {border-collapse:collapse;border-spacing:0;}
+/* change border colour to suit your needs */
+hr {display:block;height:1px;border:0;border-top:1px solid #cccccc;margin:1em 0;padding:0;}
+ul, ol, li {list-style-type: none;}input, select {vertical-align:middle;}
+.gallery {width: 800px;margin-right: auto;margin-left: auto;}
+.gallery .view {overflow: hidden;position: relative;width: 100%;height: 500px;}
+.gallery .view .view-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.gallery .view-container .view-item {float: left;width: 100%;height: 100%;}
+.gallery .view-container::after {content: "";clear: both; display: block;position: relative;clear: both;}
+.gallery .view-item img {display: inline-block;width: 100%;vertical-align: top;}
+.list{display: block;margin-top: 1px;padding-left: 22%;padding-right: 22%;}
+.list li {display: inline-block;vertical-align: top;width: 110px;box-sizing: border-box;}
+.list li a{display: block;position: relative;width: 100%;filter: brightness(0.25);cursor: pointer;-webkit-transition: 1s linear;-moz-transition: 1s linear;-o-transition:  1s linear;-ms-transition:  1s linear;transition:  1s linear;background: rgba(0, 0, 0, 0.418);}
+.list li a img {display: inline-block;width: 100%;vertical-align: top;}
+.list li a::before{content: "";display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.list li a:hover{filter: brightness(1);}
+.list li.selected a{cursor: default;filter: brightness(1)}
+.list li a :hover::before,.list li.selected a img::before {filter: brightness(1);}
+
+/* z */
+body{ overflow:hidden}
+#background-red{min-width: 704px; width: 55%;height: 670px;background: red;position: absolute;top: -30px}
+#rogobox{position: relative; left: 30%;margin-top: 32px;font-family: 'Roboto Slab', serif;}
+#rogo{position: relative;width: 100px;height: 100px;background-color: white;font-size: 50px;text-align: center;line-height: 100px; display: inline-block;color: red}
+#rogo-title{position: relative; display: inline-block; top: 28px;left: 10px;color: #fff;font-weight: bold;letter-spacing: 3px;line-height: 25px;}
+#main{ width: 800px;height: 1000px; margin: auto; background-color: white;position: relative;margin-top: 30px;box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);}
