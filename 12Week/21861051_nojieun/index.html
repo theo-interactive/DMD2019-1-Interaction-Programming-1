@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Gallery</title>
+  <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+  <div id="gallery" class="gallery">
+    <div class="view">
+      <div class="view-container"> 
+        <!-- 항목을 구성 -->
+        <div class="view-item"><img src="./img/hw1.png" alt="갤러리 이미지 1"></div>
+        <div class="view-item"><img src="./img/hw2.png" alt="갤러리 이미지 2"></div>
+        <div class="view-item"><img src="./img/hw3.png" alt="갤러리 이미지 3"></div>
+        <div class="view-item"><img src="./img/hw4.png" alt="갤러리 이미지 4"></div>
+      </div>
+    </div>
+    <ul class="list">
+      <li class="selected">
+        <a href="#" id="thumb1" title="썸네일 1 버튼"><img src="./img/1.png" alt="갤러리 이미지 썸네일 1"></a></li><li>
+        <a href="#" id="thumb2" title="썸네일 2 버튼"><img src="./img/2.png" alt="갤러리 이미지 썸네일 2"></a></li><li>
+        <a href="#" id="thumb3"title="썸네일 3 버튼"><img src="./img/3.png" alt="갤러리 이미지 썸네일 3"></a></li><li>
+        <a href="#" id="thumb4"title="썸네일 4 버튼"><img src="./img/4.png" alt="갤러리 이미지 썸네일 4"></a></li>
+      <!-- display - inline-block 을 사용할 경우 공백이 보이기 때문에 다 붙여버림 -->
+    </ul>
+  </div>
+  <script src="./vendor/gsap/TweenMax.min.js"></script>
+  <script src="./vendor/anime/anime.min.js"></script>
+  <!-- 작성한 스크립트 앞에 코드를 작성 중요중요중요~~!!~!~!~!~!~!~! -->
+  <script src="./js/script.js"></script>
+</body>
+</html>
