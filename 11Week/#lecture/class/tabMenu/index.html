@@ -16,7 +16,7 @@
     .tab-menu li a.selected{background-color:#000;cursor:default}
     .tab-container{width:800px;margin:0 auto;border:1px solid #000;box-sizing:border-box}
     .tab-container .tab-content{display:none;padding:30px;height:500px;box-sizing:border-box}
-    .tab-container .tab-content.selected{display:block} 
+     .tab-container .tab-content.selected{display:block} 
   </style>
 </head>
 <body>
@@ -35,37 +35,28 @@
     <div class="tab-content">Tab 4 Content.</div>
   </div>
   <script type="text/javascript">
-    var $tabMenu = document.querySelector("#tab-menu");
-    var $tabMenuEl = $tabMenu.querySelectorAll('a'); //list. [... ... ... ...];
-    var $tabContent = document.getElementsByClassName('tab-content'); //list [... ... ... ...];
-    // console.log($tabMenu, $tabMenuEl);
-    // console.log($tabContent);
-    for(var i = 0; i < $tabMenuEl.length; i++){
-      tabMenuClick(i);
+  
+  var $tabMenu = document.querySelector("#tab-menu");
+  var $tabMenuEl = $tabMenu.querySelectorAll('a');
+  var $tabContent=document.getElementsByClassName('tab-content');
+  for(var i = 0; i<$tabMenuel.length; i++){
+    tabMenuClick(i);
+}
+
+function tabMenuClick(index){
+  $tabMenuEl[index].addEventListener('click',function(e){
+      e.preventDefault();
+    console.log(index); 
+    for(var i = 0; i < $tabMenuEl.length;i++){
+      
     }
-    function tabMenuClick(index){
-      //i 의 순서를 체크할 수 있게 index 의 전달인자로 할당.
-      $tabMenuEl[index].addEventListener('click', function(e) {
-        e.preventDefault();
-        for(var i = 0; i < $tabMenuEl.length; i++){
-          //모든 요소에서 .selected 를 삭제.
-          $tabMenuEl[i].classList.remove('selected');
-          $tabContent[i].classList.remove('selected');
-          if(i === index){
-            //for 반복문이 실행될 때, 자신의 순서와 i 의 일치 여부를 체크.
-            //같은 경우에 .selected 를 요소에 추가.
-            $tabMenuEl[i].classList.add('selected');
-            $tabContent[i].classList.add('selected');
-          }
-        }
-        // for(var i = 0; i < $tabContent.length; i++){
-        //   $tabContent[i].classList.remove('selected');
-        //   if(i === index){
-        //     $tabContent[i].classList.add('selected');
-        //   }
-        // }
-      });
+    for(var i = 0;i<$tabContent.length;i++){
+      $tabContent[i].classList.remove('selected');
+
     }
+  });
+}
+
   </script>
 </body>
 </html>
